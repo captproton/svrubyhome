@@ -1,0 +1,201 @@
+* {
+  font-family: Helvetica;
+  font-size: 15px;
+  line-height: 22px;
+  color: #333333;
+}
+
+a {
+  color: #0033CC;
+}
+
+#panels {
+  margin-bottom: 14px;
+}
+
+body {
+  background: url('/images/background.png') #cdcdcd repeat-x;
+  text-align: center;
+  padding-top: 30px;
+}
+
+p.intro {
+  font-size: 23px;
+  font-weight: normal;
+  color: #333333;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0px 50px;
+}
+
+h1 {
+  font-size: 61px;
+  color: #cc0000;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #AAA;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 36px;
+  color: #333333;
+  text-align: center;
+}
+
+.panel h2 {
+  color: #cc0000;
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+  font-size: 23px;
+}
+
+#page {
+  width: 960px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+.third {
+  float: left;
+  width: 29.5%;
+  height: 360px;
+  margin-right: 15px;
+}
+
+#panels .third:last-child {
+  margin-right: 0px;
+}
+
+.half {
+  float: left;
+  width: 46.1%;
+  margin-right: 15px;
+}
+
+#developers ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#developers ul li {
+  margin: 0px 5px 5px 0px;
+  padding: 0px;
+  float: left;
+}
+
+#developers ul li a {
+  display: block;
+}
+
+.panel {
+  background: white;
+  -moz-box-shadow: 2px 2px 5px #BBB;
+  -webkit-box-shadow: 2px 2px 5px #BBB;
+  box-shadow: 2px 2px 5px #BBB;
+  padding: 10px;
+  
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.block_list ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.calendar {
+  display: block;
+  width: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  float: left;
+  text-align: center;
+  border: 2px solid #CC0000;
+  padding-bottom: 5px;
+  
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.calendar .month {
+  background: #CC0000;
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#footer {
+  margin-top: 20px;
+}
+
+#twitter img {
+  margin: 0px 10px 5px 0px;
+    
+}
+
+.twtr-ft, .twtr-hd {
+  display: none;
+}
+
+#footer p, #footer p * {
+  font-size: 12px;
+  text-align: center;
+}
+
+.block_list li {
+  border-bottom: 1px solid #CCC;
+  list-style: none;
+  margin: 0px;
+  padding: 5px;
+}
+
+.block_list li:last-child {
+  border-bottom: none;
+}
+
+p.help, p.help * {
+  font-size: 12px;
+}
+
+p.help {
+  text-align: center;
+}
+
+.watches {
+  float: right;
+  display: inline-block;
+}
+
+/* Browser Hacks */
+
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
+/*
+Firefox Dotted Line Fix
+  - http://sonspring.com/journal/removing-dotted-links
+*/
+a:focus {
+  outline: none;
+}
+a img {
+  border: 0px none;
+}
