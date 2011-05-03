@@ -1,16 +1,34 @@
 <div class='panel third block_list' id='events'>
   <h2>Upcoming Events</h2>
   <ul>
+		<li>(soon to automatically update)</li>
+      <li class='clearfix'>
+        <span class='calendar clearfix'>
+          <span class='month'>
+				May
+            <%# event_date.strftime("%b") %>
+          </span>
+			26
+          <%# event_date.strftime("%d") %>
+        </span>
+			<%= link_to "Railsconf debrief & The Gilded Rose Kata!", "http://www.meetup.com/silicon-valley-ruby/events/16772762/" %>
+			
+        <%# event['title'] %>
+      </li>
+	
     <%# @events.each do |event| 
     event_date = parse_date(event['summary'].split('When:')[1].split('to')[0])
     %>
       <li class='clearfix'>
         <span class='calendar clearfix'>
           <span class='month'>
+			Jun
             <%# event_date.strftime("%b") %>
           </span>
+			23
           <%# event_date.strftime("%d") %>
         </span>
+			<%= link_to "Ruby Koans", "http://www.meetup.com/silicon-valley-ruby/events/16772762/" %>
         <%# event['title'] %>
       </li>
     <%# end %>
