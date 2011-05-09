@@ -1,0 +1,446 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Silicon Valley Ruby</title>
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?d/lib/yui/2.8.0r4/build/reset/reset-min.css&d/lib/yui/2.8.0r4/build/fonts/fonts-min.css&os/mit/media/p/common/grids-min-84124.css&os/mit/media/p/common/presentation-min-25135.css&os/mit/media/m/base/modules-min-106186.css&kx/ucs/uh/css/200/yunivhead-min.css&kx/ucs/uh/css/194/logo-min.css&kx/ucs/search/css/163/search_all-min.css&kx/ucs/search/css/170/search_buttons-min.css&os/mit/media/m/header/header-min-49043.css&os/mit/media/m/navigation/navigation-min-78540.css&os/mit/media/m/ads/ads-min-106305.css&os/mit/media/m/linkbox/linkbox-min-105638.css&os/mit/media/m/footer/footer-links-min-84768.css&os/mit/media/m/trending/trending-min-103801.css&os/mit/media/m/footer/footer-info-min-65168.css" />
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/m/search/searchform-min-67238.css&os/mit/media/m/jumbotron/jumbotron-min-108022.css&os/mit/media/m/index/index-min-107373.css&os/mit/media/m/carousel/carousel-template-min-106113.css&os/mit/media/m/carousel/carousel-min-106121.css&os/mit/media/m/accordion/node-accordion-core-min-83270.css&os/mit/media/m/accordion/modules-min-77038.css&os/mit/media/m/autos/modules-min-108046.css" />
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-103773.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108267.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-108105.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssfonts/fonts.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssgrids/grids.css" type="text/css">
+
+<style>
+/* everything below is custom styling to demonstrate how to create a page layout using yui grid units */
+
+/* Fixed, Centered Layout */
+
+#doc {
+    margin:auto; /* center in viewport */
+    width: 1061px; /* fix page width */
+    background:#efefef;
+}
+
+#main .content {
+    margin-right: 10px; /* gutter between center and right columns */
+}
+
+.thumb-captions .yui3-u-1-3 {
+    vertical-align: bottom;
+}
+
+#main .yui3-u-1-2,
+#more .yui3-u-1-4 {
+    vertical-align: middle;
+}
+
+.advertisement .yui3-g,
+#more {
+    text-align: center; /* horizontally center content */
+}
+
+#more ul {
+    text-align: left; /* reset for content */
+}
+
+.advertisement .align-stub { /* empty stub used to fix the parent height and vertically align */
+    height: 200px;
+}
+
+.advertisement .yui3-u-1-2,
+.advertisement .align-stub {
+    vertical-align: middle; /* vertically center content */
+}
+
+/* content presentation (completely arbitrary, remove or customize) */
+
+#hd, .content, #more {
+    border: 1px solid #000;
+}
+
+#hd h1 {
+    font: bold 180% arial;
+    padding: 1em;
+}
+
+.content {
+    border-top: 0;
+}
+
+.content p, .content li, #nav li a {
+    padding: 0.5em 1em;
+}
+
+#nav li a, #extra li a, #more li a {
+    display: block;
+    padding: 0.25em 0;
+}
+
+#nav li a {
+    border: 1px dashed black;
+    padding: 0.5em 1em;
+}
+
+#nav .content {
+}
+
+#main .thumb-captions {
+    text-align: center;
+}
+
+#main .thumb-captions a {
+    background: #ddd;
+    border: 1px solid #000;
+    display: block;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+#main .thumb-captions img {
+    border: 1px solid #000;
+    margin: 0.5em auto;
+    display: block;
+}
+
+
+#top-stories {
+    background: #dcdcdc;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1em;
+}
+
+#top-stories ol {
+    background: #dcdcdc;
+    margin: 0 0 0 3.5em;
+}
+
+#top-stories li {
+    list-style-type: decimal;
+}
+
+#top-stories li a {
+    margin-left: -1em; /* collapse some space between list marker and content */
+}
+
+#extra .advertisement {
+    background: #666;
+    color: #fff;
+}
+
+#more {
+    background: #ccc;
+    margin-top: 1em;
+}
+
+#more ul {
+    padding: 0.5em 0;
+}
+
+#more li {
+    list-style-type: disc;
+    margin: 0 0 0 2.5em;
+}
+
+#more li a {
+    font:83% tahoma;
+}
+
+#ft {
+    background: #999;
+    font:80% verdana;
+    padding: 1em;
+    text-align: center;
+}
+</style>
+
+</head>
+<body id="doc" class="js yog-ltr  yui-skin-sam">
+    <div id="hd">
+		<div id="header" class="yom-header yog-grid" role="banner">
+			<h1>Silicon Valley Ruby (SVruby)</h1>
+		</div>
+		  <!-- <nav id='menu' class='menu clearfix'> -->
+	<div role="navigation" id="navigation" class="yom-mod yom-nav">
+		<div class="bd" id="yui_3_3_0_1_1304864398736114">
+			<div class="nav" id="yui_3_3_0_1_1304864398736113">
+				<div class="nav-stack nav-0" id="yui_3_3_0_1_1304864398736126">
+					<ul class="yog-grid" id="yui_3_3_0_1_1304864398736125">
+    <!-- <ul> -->
+          
+<li class='first' id='item_0'>
+<a href="/">	<span >Home</span>
+</a><!-- <a title="Home" href="/">
+	<span >Home</span>
+	</a> --><!-- teaser= -->
+</li>
+
+<li id='item_1'>
+<a href="/about">	<span >About</span>
+</a><!-- <a title="About" href="actionshowpathaboutcontroller/pagesid">
+	<span >About</span>
+	</a> --><!-- teaser= -->
+</li>
+
+<li class='selected last' id='item_2'>
+<a href="/blog">	<span >Blog</span>
+</a><!-- <a title="Blog" href="/blog">
+	<span >Blog</span>
+	</a> --><!-- teaser= -->
+</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+        <!-- </ul>
+      </nav> -->
+
+
+    </div>
+
+    <div class="yui3-g">
+        <div class="yui3-u-2-3" id="main">
+			<!-- developers and their code side by side -->
+            <div class="content">
+				
+
+<section id='body_content'>
+  <h1 id='body_content_title'>Blog</h1>
+<section id='body_content_left'><div class='inner'>  
+
+    <section id="blog_posts">
+        <article class="blog_post" id="blog_post_1">
+    <header>
+      <h1><a href="http://localhost:3000/blog/silicon-valley-ruby-welcome-dr-nic">Silicon Valley Ruby Welcome Dr Nic</a></h1>
+      <details>
+        <time datetime="2011-05-06" class='posted_at'>
+          Posted on May 06.
+        </time> by captproton
+      </details>
+    </header>
+    <section class='clearfix'>
+      <p>He's flown a long way from Australia, and boy are his arms tired! &#160;Dr Nic Williams&#160;now works at Engine Yard as VP Technology, responsible for Engine Yard’s Open Source program and Advanced Weapons Lab. Even More recently he has been nominated...</p>
+    </section>
+    <footer>
+      <p>
+        <a href="http://localhost:3000/blog/silicon-valley-ruby-welcome-dr-nic">Read more</a>
+      </p>
+      <aside class='comment_count'>
+             (0 comments)
+      </aside>
+    </footer>
+  </article>
+
+      
+    </section>
+</div></section>
+<section id='body_content_right'><div class='inner'>  
+
+  
+  <h2>RSS Feed</h2>
+<a href="http://localhost:3000/blog/feed.rss" id="rss_feed_subscribe">Subscribe</a>
+
+  
+</div></section></section>
+
+
+            </div>
+        </div>
+
+
+        <div class="yui3-u-1-3" id="nav">
+
+	<!-- <div id="mediatopstorycoke" class="yom-mod yom-top-story"><div class="hd"><div class="nav"><ul class="tabs">
+		<li class="selected"><a id="yom-top-story-0" href="?mod_id=mediatopstory#mediatopstory">Most Popular</a></li><li><a id="yom-top-story-1" href="?mod_id=mediatopstory#mediatopstory">Latest News</a></li></ul></div></div><div class="bd"><div class="yom-top-story-content-0"><ul class="yom-list yom-list-large"><li class="nothumb first"><div class="content"><div class="txt"><a href="/news/the-5-biggest-mistakes-used-car-buyers-make-20110506.html">The 5 Biggest Mistakes Used Car Buyers&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>Making a mistake buying a used car can cost you hundreds&mdash;even thousands of dollars more than necessary&mdash;and that doesn’t take into account the added time and stress to make things right. Here's what to avoid.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/jaguar-will-build-200-mph-c-x75-battery-supercar.html">Jaguar Will Build 200 mph C-X75 Battery&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>"Green" supercar will get 30 miles on battery power.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/biggest-car-flops-of-the-past-15-years.html">Biggest car flops of the past 15 ye&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>Despite their best efforts, automakers don’t always hit the mark with new vehicle introductions. Some vehicles have missed the mark more wildly than others &mdash; and these are the cars that will be remembered as the greatest flops of the past 15 years.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/best-car-deals--may-2011.html">Best Car Deals: May 2011</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>There’s a great new car deal out there for you, and we’ve done the research to help you find it.</p></div></div></div></div></div></li><li class="nothumb last"><div class="content"><div class="txt"><a href="/news/made-in-the-usa.html">Made in the USA</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>But does that make it American?</p></div></div></div></div></div></li></ul></div><div class="yom-top-story-content-1 hide"><a class="more" href="/news/reports/">More Latest News&nbsp;»</a></div><div class="loading hide">&nbsp;</div></div></div> -->
+	<div id="MediaFeaturedListEditorial" class="yom-mod yom-featured-list"><div class="hd"><h3>Follow Us!</h3></div><div class="bd"><ol><li class="story first"><div class="img"><a alt="Join us on Facebook!" href="http://www.facebook.com/svruby"><img width="70" height="70" title="" alt="" src="http://l.yimg.com/bt/api/res/1.2/SW3ZAtuRDhblkMD_IVKSEA--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTcwO3c9NzA-/http://media.zenfs.com/153/2011/02/11/Facebook-icon_141936.png"></a></div><div class="txt"><h4><a alt="Join us on Facebook!" href="http://www.facebook.com/svruby">Join us on Facebook!</a></h4><p>Add Silicon Valley Ruby to your social network</p></div></li><li class="story last"><div class="img"><a alt="Follow us on Twitter!" href="http://twitter.com/svruby"><img width="70" height="70" title="" alt="" src="http://l.yimg.com/bt/api/res/1.2/FAiqUOw45mcqmIHoKZ5S1A--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTcwO3c9NzA-/http://media.zenfs.com/153/2011/02/11/twitter_141936.png"></a></div><div class="txt"><h4><a alt="Follow us on Twitter!" href="http://twitter.com/svruby">Follow us on Twitter!</a></h4><p>Get top Silicon Valley Ruby buzz in your feed</p></div></li></ol></div></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="more">
+        <div class="yui3-g">
+            <div class="yui3-u-1-4">
+				<div id="nav-footer" class="yom-mod yom-nav-footer">
+	<div class="hd">
+		<h2>Silicon Valley Ruby (SVruby)</h2>
+	</div>
+	<div class="bd">
+		<div class="content">
+			<div class="wrap">
+				<ul style="width:50%" class="yom-list col first">
+					    <li><a title="#&lt;Page:0x12b5a83a0&gt;" href="/"><span>Home</span></a></li>
+					    <li><a title="#&lt;Page:0x12b5a2c70&gt;" href="actionshowpathaboutcontroller/pagesid"><span>About</span></a></li>
+					    <li><a title="#&lt;Page:0x12b5a2a90&gt;" href="/blog"><span>Blog</span></a></li>
+					    <li><a title="&nbsp;" href="/"><span> </span></a></li>
+					    <li><a title="&nbsp;" href="/"><span> </span></a></li>
+					
+				</ul>
+				<ul style="width:50%" class="yom-list col last" start="6"> 
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ft"><a class="more" href="/sitemap.xml">Silicon Valley Ruby (SVruby) Sitemap»</a></div></div>			</div>
+            <div class="yui3-u-1-4">
+
+                <div class="yom-mod yom-linkbox yom-also-on-yahoo" id="also-on-yahoo">
+	<div class="hd"><h2>Also In Ruby</h2></div>
+	<div class="bd">
+		<div class="content">
+			<div class="wrap">
+				<ul class="yom-list col first" style="width:33.333333333333%">
+					<li class="first"><a href="http://ruby-lang.org/"><span>Language</span></a></li>
+					<li><a href="http://rubyonrails.org/"><span>Rails</span></a></li>
+					<li><a href="http://www.workingwithrails.com/"><span>Work</span></a></li>
+					<li><a href="http://drnicwilliams.com/"><span>DrNic</span></a></li>
+					<li class="last"><a href="http://ruby.meetup.com/"><span>Meetups</span></a></li>
+				</ul>
+				<ul start="6" class="yom-list col" style="width:33.333333333333%">
+					<li class="first"><a href="http://railsinstaller.org/"><span>Installer</span></a></li>
+					<li><a href="http://rubyonrails.org/download"><span>Mac</span></a></li>
+					<li><a href="http://railscasts.com/"><span>Railscasts</span></a></li>
+					<li><a href="https://github.com/languages/Ruby"><span>Github</span></a></li>
+					<li class="last"><a href="http://rubyonrails.org/documentation"><span>Learn</span></a></li>
+				</ul>
+				<ul start="11" class="yom-list col last" style="width:33.333333333333%">
+					<!-- <li class="first"><a href="http://shopping.yahoo.com/"><span>Shopping</span></a></li>
+					<li><a href="http://sports.yahoo.com/"><span>Sports</span></a></li>
+					<li><a href="http://travel.yahoo.com/"><span>Travel</span></a></li>
+					<li class="last"><a href="http://tv.yahoo.com/"><span>TV</span></a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ft">
+		<a href="/everything" class="more">All Ruby »</a>
+	</div>
+</div>
+            </div>
+
+            <div class="yui3-u-1-4">
+<div class="hd"><h2>Trending Now</h2></div>
+<div class="bd">
+	<div class="content">
+		<div class="wrap">
+			<ol class="yom-list col first" style="width:50%">
+				<li class="first"><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic1" rel="nofollow"><span>Topic1</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic2" rel="nofollow"><span>Topic2</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic3" rel="nofollow"><span>Topic3</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic4" rel="nofollow"><span>Topic4</span></a></li>
+				<li class="last"><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic5" rel="nofollow"><span>Topic5</span></a></li>
+			</ol>
+			<ol start="6" class="yom-list col last" style="width:50%">
+				<li class="first"><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic6" rel="nofollow"><span>Topic6</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic7" rel="nofollow"><span>Topic7</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic8" rel="nofollow"><span>Topic8</span></a></li>
+				<li><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic9" rel="nofollow"><span>Topic9</span></a></li>
+				<li class="last"><a href="http://search.yahoo.com/search?cs=bz&amp;p=Topic10" rel="nofollow"><span>Topic10</span></a></li>
+			</ol>
+		</div>
+	</div>
+</div>
+            </div>
+        </div>
+    </div>
+
+	<!-- <div class="yog-wrap yog-full yom-stage" id="seo-footer">
+	                <div class="yog-col yog-grid yog-24u">
+	                    <div id="seo-footer-linkbox" class="yom-mod yom-linkbox seo-footer-linkbox"><div class="hd"><h2>New Cars on Yahoo! Autos</h2></div><div class="bd"><div class="content"><div class="wrap"><ul style="width:16.666666666667%" class="yom-list col first"><li class="first"><a href="http://autos.yahoo.com/nissan_trucks/;_ylt=Ak10F3z6LNwGjazsl_enFktGca9_;_ylu=X3oDMTBtNzB0ODBrBHBvcwMxBHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Nissan Trucks</span></a></li><li><a href="http://autos.yahoo.com/subaru/;_ylt=AgRtYC3FzgTx.meCawUkxfhGca9_;_ylu=X3oDMTBtcGUwcnZ2BHBvcwMyBHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Subaru Cars</span></a></li><li><a href="http://autos.yahoo.com/porsche/;_ylt=AubozJoiCM9DKULYlk1z.VNGca9_;_ylu=X3oDMTBtOWlsazlxBHBvcwMzBHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Porsche Cars</span></a></li><li><a href="http://autos.yahoo.com/rolls_royce/;_ylt=ArR7Ztsi.tPiTNQ8Z6o2uw9Gca9_;_ylu=X3oDMTBtcm84YnJwBHBvcwM0BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Rolls Royce Cars</span></a></li><li><a href="http://autos.yahoo.com/toyota/;_ylt=AqU7P8OykVEVl0ItKv6AthJGca9_;_ylu=X3oDMTBtODQxaXZ1BHBvcwM1BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Toyota Cars</span></a></li><li><a href="http://autos.yahoo.com/saab/;_ylt=Ak6TLFigkkBhJS1SojkuMGhGca9_;_ylu=X3oDMTBtaG9jZnI0BHBvcwM2BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Saab Cars</span></a></li><li><a href="http://autos.yahoo.com/audi/;_ylt=AouZuQKZqMySJu5Zsf2opjRGca9_;_ylu=X3oDMTBta3VlcWF2BHBvcwM3BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Audi Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/lotus/;_ylt=AiO4FNePYBAN.7k_5UO4QVJGca9_;_ylu=X3oDMTBtbnUwdWIyBHBvcwM4BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Lotus Cars</span></a></li></ul><ul style="width:16.666666666667%" class="yom-list col" start="9"><li class="first"><a href="http://autos.yahoo.com/nissan/;_ylt=AugRUXNciUP7S1a0iKHGRhdGca9_;_ylu=X3oDMTBta2JvcWVhBHBvcwM5BHNlYwNNZWRpYUxpbmtib3g-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Nissan Cars</span></a></li><li><a href="http://autos.yahoo.com/lexus/;_ylt=Art.7FFN1oLE3tFDJq5znUNGca9_;_ylu=X3oDMTBuaWNrdTl1BHBvcwMxMARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Lexus Cars</span></a></li><li><a href="http://autos.yahoo.com/volvo/;_ylt=AiXLHwmHNonmUBvwGlnibo1Gca9_;_ylu=X3oDMTBucHAzdDhnBHBvcwMxMQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Volvo Cars</span></a></li><li><a href="http://autos.yahoo.com/lamborghini/;_ylt=Ati76F5zMw4odWiX6QIKs9NGca9_;_ylu=X3oDMTBuNTU4YWY0BHBvcwMxMgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Lamborghini Cars</span></a></li><li><a href="http://autos.yahoo.com/toyota_trucks/;_ylt=Ah2QPPOCGIrLszndEhY2bFBGca9_;_ylu=X3oDMTBudGlnYTcyBHBvcwMxMwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Toyota Trucks</span></a></li><li><a href="http://autos.yahoo.com/lincoln/;_ylt=Ah3jRD33IzvRB1IVPnFn2VFGca9_;_ylu=X3oDMTBuY3J1am0zBHBvcwMxNARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Lincoln Cars</span></a></li><li><a href="http://autos.yahoo.com/ford/;_ylt=AhWGNAcUOik93cAO59oC_2xGca9_;_ylu=X3oDMTBuZjlwYm1sBHBvcwMxNQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Ford Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/ford_trucks/;_ylt=Ap2XEe0kj2DfWVJg3N6T1FhGca9_;_ylu=X3oDMTBuZjBzdnJwBHBvcwMxNgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Ford Trucks</span></a></li></ul><ul style="width:16.666666666667%" class="yom-list col" start="17"><li class="first"><a href="http://autos.yahoo.com/dodge/;_ylt=AkEg6JDVDw2P0Xf5W9WrYVZGca9_;_ylu=X3oDMTBucDkzbWF0BHBvcwMxNwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Dodge Cars</span></a></li><li><a href="http://autos.yahoo.com/acura/;_ylt=AtWM.ahguPuEAhhBV46RyPNGca9_;_ylu=X3oDMTBuc2xsNm51BHBvcwMxOARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Acura Cars</span></a></li><li><a href="http://autos.yahoo.com/scion/;_ylt=Amb2gcFHbm_j_sjtLyOlPVFGca9_;_ylu=X3oDMTBubWFoMG5pBHBvcwMxOQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Scion Cars</span></a></li><li><a href="http://autos.yahoo.com/chevrolet_trucks/;_ylt=AqFywgJeGRJsFg.OLZ7UoDNGca9_;_ylu=X3oDMTBubjdzcjFhBHBvcwMyMARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Chevrolet Trucks</span></a></li><li><a href="http://autos.yahoo.com/cadillac/;_ylt=Al6jCmaBjHolWXiEJfcOPDFGca9_;_ylu=X3oDMTBudm9oaWdsBHBvcwMyMQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Cadillac Cars</span></a></li><li><a href="http://autos.yahoo.com/mazda/;_ylt=AnNl5bML.ZXDoVqqbaWrrpdGca9_;_ylu=X3oDMTBuaXB0YnQ3BHBvcwMyMgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Mazda Cars</span></a></li><li><a href="http://autos.yahoo.com/honda/;_ylt=Am4Wur1Uqs7TZmLriAj0xk1Gca9_;_ylu=X3oDMTBuaDV0bXE4BHBvcwMyMwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Honda Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/maybach/;_ylt=AvKdbbSDZ.tgRY5HA5C7W7lGca9_;_ylu=X3oDMTBuMHI0YXFhBHBvcwMyNARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Maybach Cars</span></a></li></ul><ul style="width:16.666666666667%" class="yom-list col" start="25"><li class="first"><a href="http://autos.yahoo.com/pontiac/;_ylt=AtxCw1U8dYV9EEhyXEFsH0pGca9_;_ylu=X3oDMTBuc2szb21vBHBvcwMyNQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Pontiac Cars</span></a></li><li><a href="http://autos.yahoo.com/buick/;_ylt=AqrVm0iwgPKhi.f4OwS0n1hGca9_;_ylu=X3oDMTBuNGJnczA4BHBvcwMyNgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Buick Cars</span></a></li><li><a href="http://autos.yahoo.com/chevrolet/;_ylt=AoHNOfQz9TOSaWte56VmL8ZGca9_;_ylu=X3oDMTBubGF1cnY4BHBvcwMyNwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Chevrolet Cars</span></a></li><li><a href="http://autos.yahoo.com/gmc/;_ylt=AoNhPBFRzflNWNBofTxB_N1Gca9_;_ylu=X3oDMTBuc3BlamRrBHBvcwMyOARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>GMC Cars</span></a></li><li><a href="http://autos.yahoo.com/hyundai/;_ylt=AiD1FBeQSX9bAUqMqGLn_DtGca9_;_ylu=X3oDMTBuY3FxMXEyBHBvcwMyOQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Hyundai Cars</span></a></li><li><a href="http://autos.yahoo.com/kia/;_ylt=AncDbpMU34B8i688OvwMJjFGca9_;_ylu=X3oDMTBuYWo4YThxBHBvcwMzMARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Kia Cars</span></a></li><li><a href="http://autos.yahoo.com/chrysler/;_ylt=AnpoeAtU2Sz9qRO3gOlSPcZGca9_;_ylu=X3oDMTBuMGg3MTJxBHBvcwMzMQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Chrysler Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/infiniti/;_ylt=AoVnE2bGf4dfI0OZ9zFXCzxGca9_;_ylu=X3oDMTBudjJkcm11BHBvcwMzMgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Infiniti Cars</span></a></li></ul><ul style="width:16.666666666667%" class="yom-list col" start="33"><li class="first"><a href="http://autos.yahoo.com/suzuki/;_ylt=AuzpcNOjhpRmmd_OjUJvZghGca9_;_ylu=X3oDMTBuODB1NGY2BHBvcwMzMwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Suzuki Cars</span></a></li><li><a href="http://autos.yahoo.com/mitsubishi/;_ylt=AlyNc0wU3VJx5xuGG5bJgvNGca9_;_ylu=X3oDMTBuNG9vMDJnBHBvcwMzNARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Mitsubishi Cars</span></a></li><li><a href="http://autos.yahoo.com/maserati/;_ylt=ArK7goMq_sgs1H9u8dvXjWlGca9_;_ylu=X3oDMTBuN3BzZGd1BHBvcwMzNQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Maserati Cars</span></a></li><li><a href="http://autos.yahoo.com/hummer/;_ylt=ArLyaMNUhfotxtOvDmPFndtGca9_;_ylu=X3oDMTBuMHBzdjR1BHBvcwMzNgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Hummer Cars</span></a></li><li><a href="http://autos.yahoo.com/freightliner/;_ylt=AuMQWilHBaDhvMhfn5QUPPxGca9_;_ylu=X3oDMTBuMDA2OTJoBHBvcwMzNwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Freightliner Cars</span></a></li><li><a href="http://autos.yahoo.com/mercedes_benz/;_ylt=AoYMcZ6DO0.E3fiX2A7l5XBGca9_;_ylu=X3oDMTBuZXJjODUzBHBvcwMzOARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Mercedes-Benz Cars</span></a></li><li><a href="http://autos.yahoo.com/bentley/;_ylt=AkH2CkMTQgS2Puj8UeVdjQVGca9_;_ylu=X3oDMTBubDRiZ3U1BHBvcwMzOQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Bentley Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/dodge_trucks/;_ylt=AlfEtNZHrubOZdfN.rIA4B5Gca9_;_ylu=X3oDMTBuMWo2aHBhBHBvcwM0MARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Dodge Trucks</span></a></li></ul><ul style="width:16.666666666667%" class="yom-list col last" start="41"><li class="first"><a href="http://autos.yahoo.com/mini/;_ylt=AuCkq.qh58o64BAZkSe3V5ZGca9_;_ylu=X3oDMTBua2c0aDAyBHBvcwM0MQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Mini Cars</span></a></li><li><a href="http://autos.yahoo.com/aston_martin/;_ylt=AhQETyNls.qrYHtRPrjnfllGca9_;_ylu=X3oDMTBuNXZvbGllBHBvcwM0MgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Aston Martin Cars</span></a></li><li><a href="http://autos.yahoo.com/ferrari/;_ylt=Ar6zdAkgkULm7qsrBXBgoydGca9_;_ylu=X3oDMTBuazB1Ym5mBHBvcwM0MwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Ferrari Cars</span></a></li><li><a href="http://autos.yahoo.com/bmw/;_ylt=Ap42n3F8WI9I3t.8_a6HeE5Gca9_;_ylu=X3oDMTBuYzZ2MjFrBHBvcwM0NARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>BMW Cars</span></a></li><li><a href="http://autos.yahoo.com/mercury/;_ylt=AsHpDSOhlx9cl4eNNHoHb2FGca9_;_ylu=X3oDMTBuNWN0cmthBHBvcwM0NQRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Mercury Cars</span></a></li><li><a href="http://autos.yahoo.com/land_rover/;_ylt=Ag8FHznUJsQhGeSib2DBtzNGca9_;_ylu=X3oDMTBucnRuaHByBHBvcwM0NgRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Land Rover Cars</span></a></li><li><a href="http://autos.yahoo.com/tesla/;_ylt=AglzcZ4IBiCDCkOaPSeAp65Gca9_;_ylu=X3oDMTBuY2I1a2ZzBHBvcwM0NwRzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Tesla Cars</span></a></li><li class="last"><a href="http://autos.yahoo.com/smart/;_ylt=Ah3aj1Q3wOiTsy48oH9GB.RGca9_;_ylu=X3oDMTBuc2twc2duBHBvcwM0OARzZWMDTWVkaWFMaW5rYm94;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Smart Cars</span></a></li></ul></div></div></div></div>
+	                </div>
+	            </div> -->
+
+	
+				<div class="yog-ft">
+				                <div id="footer">
+				                    <!--?xml version="1.0" encoding="utf-8"?--><root></root>
+				                    <div id="footer-links" class="yom-mod yom-footer-links">
+    <div class="bd">
+        <div class="yog-grid yog-24u">
+            <div class="yog-wrap">
+                <div class="yog-col yog-7u">
+                    <div id="nav-footer" class="yom-mod yom-nav-footer">
+						<div class="hd">
+							<h2>Yahoo! Autos</h2>
+						</div>
+						<div class="bd">
+							<div class="content">
+								<div class="wrap">
+									<ul style="width:50%" class="yom-list col first">
+										<li class="first">
+											<a title="Home page" href="/">
+												<span>Home</span>
+											</a>
+										</li>
+										<li><a title="New Cars on Yahoo! Autos Legacy site" href="/new-cars.html;_ylt=AheQ_FYN3d1ptNVa8UHCebtGca9_;_ylu=X3oDMTB2anYzOTR2BHBvcwMyBHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>New Cars</span></a></li><li><a title="Used Cars tab on Legacy Autos site" href="/used_cars.html;_ylt=AgA.Zl4X.yQzZU2fPsygbwpGca9_;_ylu=X3oDMTB2c2ZhcmFmBHBvcwMzBHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Used Cars</span></a></li><li><a title="News" href="/news/;_ylt=Ahd5GDDaMVv0aQfKoB70uJ5Gca9_;_ylu=X3oDMTB2cnVtZmphBHBvcwM0BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>News</span></a></li><li class="last"><a title="Finance landing page for Legacy Autos site" href="/car-finance/;_ylt=Anedu50kX2X91YWYJbZev7NGca9_;_ylu=X3oDMTB2Nm42amdoBHBvcwM1BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Finance</span></a></li></ul><ul style="width:50%" class="yom-list col last" start="6"><li class="first"><a title="Insurance tab for Autos Legacy site" href="/car-insurance/;_ylt=AuNeexWu2NmfjfemizLqyv5Gca9_;_ylu=X3oDMTB2MGs2ZWcyBHBvcwM2BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Insurance</span></a></li><li><a title="" href="/maintain/;_ylt=AivrNsuFCl1fO6I1J0KtmVhGca9_;_ylu=X3oDMTB2cm83YW9yBHBvcwM3BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Maintain</span></a></li><li><a title="Green Cars" href="/green/;_ylt=AsNAv8Ifz_KnjM68jVoeu5pGca9_;_ylu=X3oDMTB2bTQzbmVhBHBvcwM4BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Green Center</span></a></li><li class="last"><a title="My Autos Center" href="/my/;_ylt=Ag6BEFnGQDzOAKyUm6WJXcNGca9_;_ylu=X3oDMTB2c2RndjZ2BHBvcwM5BHNlYwNNZWRpYU5hdmlnYXRpb25Gb290ZXI-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>My Autos</span></a></li></ul></div></div></div><div class="ft"><a class="more" href="/sitemap/;_ylt=AjFvGKAU_dTjwjOs5PNJJ5dGca9_;_ylu=X3oDMTEwNHI4dHVnBHBvcwMxMARzZWMDTWVkaWFOYXZpZ2F0aW9uRm9vdGVy;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3">Yahoo! Autos Sitemap»</a></div></div>
+                </div>
+                <div class="yog-col yog-17u">
+                    <div class="yog-wrap">
+                        <div class="yog-col yog-9u first">
+                            <div id="also-on-yahoo" class="yom-mod yom-linkbox yom-also-on-yahoo"><div class="hd"><h2>Also On Yahoo!</h2></div><div class="bd"><div class="content"><div class="wrap"><ul style="width:33.333333333333%" class="yom-list col first"><li class="first"><a href="http://autos.yahoo.com/;_ylt=AtRBKgDt4ZgG0.J5QJqb979Gca9_;_ylu=X3oDMTBxc2g1ZWtlBHBvcwMxBHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Autos</span></a></li><li><a href="http://finance.yahoo.com/;_ylt=AmnaNlnh5FXzod0zSLWdirlGca9_;_ylu=X3oDMTBxNzNwanFrBHBvcwMyBHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Finance</span></a></li><li><a href="http://games.yahoo.com/;_ylt=Aur.uzQFBffmQqwZl6y.tGdGca9_;_ylu=X3oDMTBxN2pwbzZkBHBvcwMzBHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Games</span></a></li><li><a href="http://us.lrd.yahoo.com/_ylt=ArjQF6qcUe7qfZmvLRyHKIZGca9_;_ylu=X3oDMTBxdHNpN3ZxBHBvcwM0BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11cb6o5gu/EXP=1306123114/**http%3A//groups.yahoo.com/"><span>Groups</span></a></li><li class="last"><a href="http://us.lrd.yahoo.com/_ylt=AvD7NbLYFY1_Gd2GOJL3v4lGca9_;_ylu=X3oDMTBxcTAwcXJ2BHBvcwM1BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11cfpruta/EXP=1306123114/**http%3A//health.yahoo.com/"><span>Health</span></a></li></ul><ul style="width:33.333333333333%" class="yom-list col" start="6"><li class="first"><a href="http://us.lrd.yahoo.com/_ylt=AiV9gnOwusWfhg4YiZ5qdthGca9_;_ylu=X3oDMTBxbmtyYmZvBHBvcwM2BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11a1fp68h/EXP=1306123114/**http%3A//maps.yahoo.com/"><span>Maps</span></a></li><li><a href="http://us.lrd.yahoo.com/_ylt=AsXsmZxW9f6MoOhUFYyXp3pGca9_;_ylu=X3oDMTBxM3JycTJpBHBvcwM3BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11cmjvf4o/EXP=1306123114/**http%3A//movies.yahoo.com/"><span>Movies</span></a></li><li><a href="http://us.lrd.yahoo.com/_ylt=Agd_NH9vv08mWwNPU0y5Jm1Gca9_;_ylu=X3oDMTBxZXJvZG04BHBvcwM4BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11b095fuu/EXP=1306123114/**http%3A//music.yahoo.com/"><span>Music</span></a></li><li><a href="http://omg.yahoo.com/;_ylt=Amss354MFY5tyIGSzibzrJdGca9_;_ylu=X3oDMTBxZzdkbmQwBHBvcwM5BHNlYwNNZWRpYUFsc29PbllhaG9v;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>omg!</span></a></li><li class="last"><a href="http://shine.yahoo.com/;_ylt=AumUPXdYIgjF9TeRL1MJb6JGca9_;_ylu=X3oDMTByb2dtNm00BHBvcwMxMARzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Shine</span></a></li></ul><ul style="width:33.333333333333%" class="yom-list col last" start="11"><li class="first"><a href="http://shopping.yahoo.com/;_ylt=Ap.BRdbGoEB.8MJUhqXMfgtGca9_;_ylu=X3oDMTBybWg4ZjZrBHBvcwMxMQRzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Shopping</span></a></li><li><a href="http://sports.yahoo.com/;_ylt=Aj5Nn9rO6nbS5a3XrgfPPXpGca9_;_ylu=X3oDMTByYW8xNG1hBHBvcwMxMgRzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3"><span>Sports</span></a></li><li><a href="http://travel.yahoo.com/;_ylt=AnZk5Rbkn3zRITx_iHqc1I9Gca9_;_ylu=X3oDMTByODdya3U1BHBvcwMxMwRzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD"><span>Travel</span></a></li><li class="last"><a href="http://us.lrd.yahoo.com/_ylt=AqBbYFFrId8CiD4_EEs_lUVGca9_;_ylu=X3oDMTByNzQ3bmc2BHBvcwMxNARzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=118c7fu32/EXP=1306123114/**http%3A//tv.yahoo.com/"><span>TV</span></a></li></ul></div></div></div><div class="ft"><a class="more" href="http://us.lrd.yahoo.com/_ylt=Av1ra9I69etJtdDiu3y_lk5Gca9_;_ylu=X3oDMTByb2c4ZWpzBHBvcwMxNQRzZWMDTWVkaWFBbHNvT25ZYWhvbw--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=11gc0vpjs/EXP=1306123114/**http%3A//everything.yahoo.com/">All Yahoo! »</a></div></div>
+                        </div>
+                        <div class="yog-col yog-8u last">
+                            <div id="trending" class="yom-mod yom-linkbox yom-trending">
+								<div class="hd"><h2>Trending Now</h2></div>
+								<div class="bd"><div class="content"><div class="wrap">
+									<ol style="width:50%" class="yom-list col first">
+										<li class="first"><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=AmPJ0G_H6.8xnuQt0kwAVj9Gca9_;_ylu=X3oDMTByNmVubmVmBHBvcwMxBHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Natalie+Portman"><span>Topic1</span></a></li><li><a rel="nofollow" href="http://us.lrd.yahoo.com/_ylt=Aun_Jk.Cj.OhPf7KwxvyMRRGca9_;_ylu=X3oDMTByMGczbTJuBHBvcwMyBHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=0/SIG=12ou777om/EXP=1306123114/**http%3A//news.search.yahoo.com/search%3Fp=9/11%2Battack%2Bplan%26cs=bz"><span>9/11 attack plan</span></a></li><li><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=Ar8UE28Ax2Q.nbaqiv9Tst9Gca9_;_ylu=X3oDMTByMWtkOGM4BHBvcwMzBHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Ginnifer+Goodwin"><span>Ginnifer Goodwin</span></a></li><li><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=AtQ6kq_uzvoRixf0EPJ2kzlGca9_;_ylu=X3oDMTBydnA1NWJ2BHBvcwM0BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Ellie+Goulding"><span>Ellie Goulding</span></a></li><li class="last"><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=AtX3rQ2usOt18z9YIjqs__NGca9_;_ylu=X3oDMTByOGl1MWI2BHBvcwM1BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Angela+Bassett"><span>Angela Bassett</span></a></li>
+									</ol>
+									<ol style="width:50%" class="yom-list col last" start="6">
+										<li class="first"><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=AsDwd_32l812dgUgTt6shQZGca9_;_ylu=X3oDMTByZnFzbmg4BHBvcwM2BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Mothers+Day"><span>Mother's Day</span></a></li><li><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=Ah7YqN6k554.CxasUWKg10RGca9_;_ylu=X3oDMTBybWU3b3QxBHBvcwM3BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?p=Mel+Gibson"><span>Mel Gibson</span></a></li><li><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=Amkt_BSDMjluqefTL.KxI6ZGca9_;_ylu=X3oDMTBycjZqdGRyBHBvcwM4BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Gas+prices"><span>Gas prices</span></a></li><li><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=AoODsjZPhqjbs4uUbv7gWtlGca9_;_ylu=X3oDMTByaXAyY3FoBHBvcwM5BHNlYwNNZWRpYVRyZW5kaW5nQ29rZQ--;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Health+care"><span>Health care</span></a></li><li class="last"><a rel="nofollow" href="http://search.yahoo.com/search;_ylt=Ap3ZYsFC_AvtWJyzbD._0iZGca9_;_ylu=X3oDMTBzZnBsOW05BHBvcwMxMARzZWMDTWVkaWFUcmVuZGluZ0Nva2U-;_ylg=X3oDMTFjN2RjMHJ2BGludGwDdXMEbGFuZwNlbi11cwRwc3RhaWQDBHB0A3NlY3Rpb25zBHRlc3QD;_ylv=3?cs=bz&amp;p=Brandon+Knight"><span>Brandon Knight</span></a></li>
+									</ol>
+								</div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+				                    <div role="contentinfo" class="yom-mod yom-footer-info" id="footer-info">
+									 
+									</div>
+				                    <!-- SpaceID=2142204230 loc=FSRVY noad -->
+				<script language="javascript">
+				if(window.yzq_d==null)window.yzq_d=new Object();
+				window.yzq_d['PTAcR9j8fbs-']='&amp;U=12dml403i%2fN%3dPTAcR9j8fbs-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0';
+				</script><noscript>&lt;img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=asHncUPDlDlcbnXdSUWfngOrYtLIik3HZmoABirs&amp;T=180ungdhq%2fX%3d1304913514%2fE%3d2142204230%2fR%3dautos%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d2019027895%2fH%3dc2VydmVJZD0iYXNIbmNVUERsRGxjYm5YZFNVV2ZuZ09yWXRMSWlrM0habW9BQmlycyIgc2l0ZUlkPSI0NDA3MDUxIiB0U3RtcD0iMTMwNDkxMzUxNDQ2Nzk2OSIg%2fQ%3d-1%2fS%3d1%2fJ%3dC5878962&amp;U=12dml403i%2fN%3dPTAcR9j8fbs-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0"&gt;</noscript>
+				               </div>
+				</div>
+</body>
+</html>
+
+<script type="text/javascript"
+src="http://l.yimg.com/d/lib/rt/rto1_78.js"></script><script>var rt_page="1171801334:FRTMA"; var
+rt_ip="98.210.200.138";
+if ("function" == typeof(rt_AddVar) ){ rt_AddVar("ys", escape("A95B9345")); rt_AddVar("cr", escape("g4Epr8BuJ/."));
+rt_AddVar("sg", escape("/SIG=13rs0qat35044ij14r60m2&b=4&d=iyURmdxpYEKR3V87.wTob0ybrRRuAU7bQWpF6A--&s=3c&i=uGe8UYK0h_.IyW8ImsUa/1304859284/98.210.200.138/A95B9345")); rt_AddVar("yd", escape("63766496"));
+}</script><noscript><img src="http://rtb.pclick.yahoo.com/images/nojs.gif?p=1171801334:FRTMA"></noscript>
+<!-- SpaceID=1171801334 loc=FSRVY noad -->
+<script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['46UGZEoGYmY-']='&U=12d1492ug%2fN%3d46UGZEoGYmY-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=1812omst3%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d993993946%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345&U=12d1492ug%2fN%3d46UGZEoGYmY-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0"></noscript><script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['4aUGZEoGYmY-']='&U=13er94c80%2fN%3d4aUGZEoGYmY-%2fC%3d289534.9603437.10326224.9298098%2fD%3dFOOT%2fB%3d4123617%2fV%3d1';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=182fo30it%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d1744984874%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345&U=13er94c80%2fN%3d4aUGZEoGYmY-%2fC%3d289534.9603437.10326224.9298098%2fD%3dFOOT%2fB%3d4123617%2fV%3d1"></noscript>
+<!-- VER-3.0.185880 -->
+<script language=javascript>
+if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=http://l.yimg.com/d/lib/bc/bc_2.0.5.js></scr"+"ipt>");
+</script><script language=javascript>
+if(window.yzq_p)yzq_p('P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=17t8rfumt%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1884324950%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fS%3d1%2fJ%3dA95B9345');
+if(window.yzq_s)yzq_s();
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=1825ufekr%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1194475282%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345"></noscript><script language=javascript>
+if(window.xzq_p==null)document.write("<scr"+"ipt language=javascript src='http://e.yimg.com/ii/yabcs.js'></scr"+"ipt>");
+</script><script language=javascript>
+if(window.xzq_svr)xzq_svr('http://csc.beap.ad.yieldmanager.net/');
+if(window.xzq_p)xzq_p('i?bv=1.0.0&bs=(128bhudmd(gid$Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5,st$1304859284002881,v$1.0))&t=J-D');
+if(window.xzq_s)xzq_s();
+</script><noscript><img width=1 height=1 alt="" src="http://csc.beap.ad.yieldmanager.net/i?bv=1.0.0&bs=(128bhudmd(gid$Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5,st$1304859284002881,v$1.0))&t=J-D"></noscript>
+<!-- p2.ydn.sp1.yahoo.com compressed/chunked Sun May  8 05:54:43 PDT 2011 -->
