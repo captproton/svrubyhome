@@ -50,10 +50,12 @@ end
 # gem 'refinerycms-portfolio',    '~> 0.9.9'
 gem 'refinerycms-theming',      '~> 0.9.9'
 # gem 'refinerycms-search',       '~> 0.9.8'
-# gem 'refinerycms-blog',         '~> 1.1'
+gem 'refinerycms-blog',         '~> 1.3'
 # gem 'refinerycms-page-images,   '~> 1.0
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 0.9.9.9'
+gem 'heroku'  ##if you are using heroku
+gem 'taps'    ## support for heroku db:push
 
 # END USER DEFINED

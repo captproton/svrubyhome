@@ -1,0 +1,239 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Silicon Valley Ruby</title>
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?d/lib/yui/2.8.0r4/build/reset/reset-min.css&d/lib/yui/2.8.0r4/build/fonts/fonts-min.css&os/mit/media/p/common/grids-min-84124.css&os/mit/media/p/common/presentation-min-25135.css&os/mit/media/m/base/modules-min-106186.css&kx/ucs/uh/css/200/yunivhead-min.css&kx/ucs/uh/css/194/logo-min.css&kx/ucs/search/css/163/search_all-min.css&kx/ucs/search/css/170/search_buttons-min.css&os/mit/media/m/header/header-min-49043.css&os/mit/media/m/navigation/navigation-min-78540.css&os/mit/media/m/ads/ads-min-106305.css&os/mit/media/m/linkbox/linkbox-min-105638.css&os/mit/media/m/footer/footer-links-min-84768.css&os/mit/media/m/trending/trending-min-103801.css&os/mit/media/m/footer/footer-info-min-65168.css" />
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/m/search/searchform-min-67238.css&os/mit/media/m/jumbotron/jumbotron-min-108022.css&os/mit/media/m/index/index-min-107373.css&os/mit/media/m/carousel/carousel-template-min-106113.css&os/mit/media/m/carousel/carousel-min-106121.css&os/mit/media/m/accordion/node-accordion-core-min-83270.css&os/mit/media/m/accordion/modules-min-77038.css&os/mit/media/m/autos/modules-min-108046.css" />
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-103773.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108267.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-108105.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssfonts/fonts.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssgrids/grids.css" type="text/css">
+
+<style>
+/* everything below is custom styling to demonstrate how to create a page layout using yui grid units */
+
+/* Fixed, Centered Layout */
+
+#doc {
+    margin:auto; /* center in viewport */
+    width: 1061px; /* fix page width */
+    background:#efefef;
+}
+
+#main .content {
+    margin-right: 10px; /* gutter between center and right columns */
+}
+
+.thumb-captions .yui3-u-1-3 {
+    vertical-align: bottom;
+}
+
+#main .yui3-u-1-2,
+#more .yui3-u-1-4 {
+    vertical-align: middle;
+}
+
+.advertisement .yui3-g,
+#more {
+    text-align: center; /* horizontally center content */
+}
+
+#more ul {
+    text-align: left; /* reset for content */
+}
+
+.advertisement .align-stub { /* empty stub used to fix the parent height and vertically align */
+    height: 200px;
+}
+
+.advertisement .yui3-u-1-2,
+.advertisement .align-stub {
+    vertical-align: middle; /* vertically center content */
+}
+
+/* content presentation (completely arbitrary, remove or customize) */
+
+#hd, .content, #more {
+    border: 1px solid #000;
+}
+
+#hd h1 {
+    font: bold 180% arial;
+    padding: 1em;
+}
+
+.content {
+    border-top: 0;
+}
+
+.content p, .content li, #nav li a {
+    padding: 0.5em 1em;
+}
+
+#nav li a, #extra li a, #more li a {
+    display: block;
+    padding: 0.25em 0;
+}
+
+#nav li a {
+    border: 1px dashed black;
+    padding: 0.5em 1em;
+}
+
+#nav .content {
+}
+
+#main .thumb-captions {
+    text-align: center;
+}
+
+#main .thumb-captions a {
+    background: #ddd;
+    border: 1px solid #000;
+    display: block;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+#main .thumb-captions img {
+    border: 1px solid #000;
+    margin: 0.5em auto;
+    display: block;
+}
+
+
+#top-stories {
+    background: #dcdcdc;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1em;
+}
+
+#top-stories ol {
+    background: #dcdcdc;
+    margin: 0 0 0 3.5em;
+}
+
+#top-stories li {
+    list-style-type: decimal;
+}
+
+#top-stories li a {
+    margin-left: -1em; /* collapse some space between list marker and content */
+}
+
+#extra .advertisement {
+    background: #666;
+    color: #fff;
+}
+
+#more {
+    background: #ccc;
+    margin-top: 1em;
+}
+
+#more ul {
+    padding: 0.5em 0;
+}
+
+#more li {
+    list-style-type: disc;
+    margin: 0 0 0 2.5em;
+}
+
+#more li a {
+    font:83% tahoma;
+}
+
+#ft {
+    background: #999;
+    font:80% verdana;
+    padding: 1em;
+    text-align: center;
+}
+</style>
+
+</head>
+<body id="doc" class="js yog-ltr  yui-skin-sam">
+    <div id="hd">
+		<div id="header" class="yom-header yog-grid" role="banner">
+			<h1>Silicon Valley Ruby (SVruby)</h1>
+		</div>
+		<%= render :partial => "/shared/menu" %>
+
+    </div>
+
+    <div class="yui3-g">
+        <div class="yui3-u-2-3" id="main">
+			<!-- developers and their code side by side -->
+            <div class="content">
+				<%= yield %>
+            </div>
+        </div>
+
+
+        <div class="yui3-u-1-3" id="nav">
+
+	<!-- <div id="mediatopstorycoke" class="yom-mod yom-top-story"><div class="hd"><div class="nav"><ul class="tabs">
+		<li class="selected"><a id="yom-top-story-0" href="?mod_id=mediatopstory#mediatopstory">Most Popular</a></li><li><a id="yom-top-story-1" href="?mod_id=mediatopstory#mediatopstory">Latest News</a></li></ul></div></div><div class="bd"><div class="yom-top-story-content-0"><ul class="yom-list yom-list-large"><li class="nothumb first"><div class="content"><div class="txt"><a href="/news/the-5-biggest-mistakes-used-car-buyers-make-20110506.html">The 5 Biggest Mistakes Used Car Buyers&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>Making a mistake buying a used car can cost you hundreds&mdash;even thousands of dollars more than necessary&mdash;and that doesn’t take into account the added time and stress to make things right. Here's what to avoid.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/jaguar-will-build-200-mph-c-x75-battery-supercar.html">Jaguar Will Build 200 mph C-X75 Battery&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>"Green" supercar will get 30 miles on battery power.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/biggest-car-flops-of-the-past-15-years.html">Biggest car flops of the past 15 ye&nbsp;…</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>Despite their best efforts, automakers don’t always hit the mark with new vehicle introductions. Some vehicles have missed the mark more wildly than others &mdash; and these are the cars that will be remembered as the greatest flops of the past 15 years.</p></div></div></div></div></div></li><li class="nothumb"><div class="content"><div class="txt"><a href="/news/best-car-deals--may-2011.html">Best Car Deals: May 2011</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>There’s a great new car deal out there for you, and we’ve done the research to help you find it.</p></div></div></div></div></div></li><li class="nothumb last"><div class="content"><div class="txt"><a href="/news/made-in-the-usa.html">Made in the USA</a><cite> </cite></div><div class="preview"><div class="yom-mod"><div class="bd"><div class="content"><p>But does that make it American?</p></div></div></div></div></div></li></ul></div><div class="yom-top-story-content-1 hide"><a class="more" href="/news/reports/">More Latest News&nbsp;»</a></div><div class="loading hide">&nbsp;</div></div></div> -->
+	<div id="MediaFeaturedListEditorial" class="yom-mod yom-featured-list"><div class="hd"><h3>Follow Us!</h3></div><div class="bd"><ol><li class="story first"><div class="img"><a alt="Join us on Facebook!" href="http://www.facebook.com/svruby"><img width="70" height="70" title="" alt="" src="http://l.yimg.com/bt/api/res/1.2/SW3ZAtuRDhblkMD_IVKSEA--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTcwO3c9NzA-/http://media.zenfs.com/153/2011/02/11/Facebook-icon_141936.png"></a></div><div class="txt"><h4><a alt="Join us on Facebook!" href="http://www.facebook.com/svruby">Join us on Facebook!</a></h4><p>Add Silicon Valley Ruby to your social network</p></div></li><li class="story last"><div class="img"><a alt="Follow us on Twitter!" href="http://twitter.com/svruby"><img width="70" height="70" title="" alt="" src="http://l.yimg.com/bt/api/res/1.2/FAiqUOw45mcqmIHoKZ5S1A--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTcwO3c9NzA-/http://media.zenfs.com/153/2011/02/11/twitter_141936.png"></a></div><div class="txt"><h4><a alt="Follow us on Twitter!" href="http://twitter.com/svruby">Follow us on Twitter!</a></h4><p>Get top Silicon Valley Ruby buzz in your feed</p></div></li></ol></div></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="more">
+        <div class="yui3-g">
+            <div class="yui3-u-1-4">
+				<%= render :partial => '/pages/nav_footer' %>
+	
+				<div class="yog-ft">
+				                <div id="footer">
+				                    <!--?xml version="1.0" encoding="utf-8"?--><root></root>
+				                    <%= render :partial => '/pages/footer_links' %>
+				                    <div role="contentinfo" class="yom-mod yom-footer-info" id="footer-info">
+										<% render :partial => '/pages/footer' %>
+									 
+									</div>
+				                    <!-- SpaceID=2142204230 loc=FSRVY noad -->
+				<script language="javascript">
+				if(window.yzq_d==null)window.yzq_d=new Object();
+				window.yzq_d['PTAcR9j8fbs-']='&amp;U=12dml403i%2fN%3dPTAcR9j8fbs-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0';
+				</script><noscript>&lt;img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=asHncUPDlDlcbnXdSUWfngOrYtLIik3HZmoABirs&amp;T=180ungdhq%2fX%3d1304913514%2fE%3d2142204230%2fR%3dautos%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d2019027895%2fH%3dc2VydmVJZD0iYXNIbmNVUERsRGxjYm5YZFNVV2ZuZ09yWXRMSWlrM0habW9BQmlycyIgc2l0ZUlkPSI0NDA3MDUxIiB0U3RtcD0iMTMwNDkxMzUxNDQ2Nzk2OSIg%2fQ%3d-1%2fS%3d1%2fJ%3dC5878962&amp;U=12dml403i%2fN%3dPTAcR9j8fbs-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0"&gt;</noscript>
+				               </div>
+				</div>
+</body>
+</html>
+
+<script type="text/javascript"
+src="http://l.yimg.com/d/lib/rt/rto1_78.js"></script><script>var rt_page="1171801334:FRTMA"; var
+rt_ip="98.210.200.138";
+if ("function" == typeof(rt_AddVar) ){ rt_AddVar("ys", escape("A95B9345")); rt_AddVar("cr", escape("g4Epr8BuJ/."));
+rt_AddVar("sg", escape("/SIG=13rs0qat35044ij14r60m2&b=4&d=iyURmdxpYEKR3V87.wTob0ybrRRuAU7bQWpF6A--&s=3c&i=uGe8UYK0h_.IyW8ImsUa/1304859284/98.210.200.138/A95B9345")); rt_AddVar("yd", escape("63766496"));
+}</script><noscript><img src="http://rtb.pclick.yahoo.com/images/nojs.gif?p=1171801334:FRTMA"></noscript>
+<!-- SpaceID=1171801334 loc=FSRVY noad -->
+<script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['46UGZEoGYmY-']='&U=12d1492ug%2fN%3d46UGZEoGYmY-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=1812omst3%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d993993946%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345&U=12d1492ug%2fN%3d46UGZEoGYmY-%2fC%3d-1%2fD%3dFSRVY%2fB%3d-1%2fV%3d0"></noscript><script language=javascript>
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['4aUGZEoGYmY-']='&U=13er94c80%2fN%3d4aUGZEoGYmY-%2fC%3d289534.9603437.10326224.9298098%2fD%3dFOOT%2fB%3d4123617%2fV%3d1';
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=182fo30it%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3dYAHOO%2fF%3d1744984874%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345&U=13er94c80%2fN%3d4aUGZEoGYmY-%2fC%3d289534.9603437.10326224.9298098%2fD%3dFOOT%2fB%3d4123617%2fV%3d1"></noscript>
+<!-- VER-3.0.185880 -->
+<script language=javascript>
+if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=http://l.yimg.com/d/lib/bc/bc_2.0.5.js></scr"+"ipt>");
+</script><script language=javascript>
+if(window.yzq_p)yzq_p('P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=17t8rfumt%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1884324950%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fS%3d1%2fJ%3dA95B9345');
+if(window.yzq_s)yzq_s();
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5&T=1825ufekr%2fX%3d1304859284%2fE%3d1171801334%2fR%3ddev_net%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1194475282%2fH%3dc2VydmVJZD0iTmwuNlhFV1RXNkJRRUpLWVNiTUN3aU0wWXRMSWlrM0drcE1BRHN6NSIgc2l0ZUlkPSI0NDY1NTUxIiB0U3RtcD0iMTMwNDg1OTI4NDAwMjg4MSIg%2fQ%3d-1%2fS%3d1%2fJ%3dA95B9345"></noscript><script language=javascript>
+if(window.xzq_p==null)document.write("<scr"+"ipt language=javascript src='http://e.yimg.com/ii/yabcs.js'></scr"+"ipt>");
+</script><script language=javascript>
+if(window.xzq_svr)xzq_svr('http://csc.beap.ad.yieldmanager.net/');
+if(window.xzq_p)xzq_p('i?bv=1.0.0&bs=(128bhudmd(gid$Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5,st$1304859284002881,v$1.0))&t=J-D');
+if(window.xzq_s)xzq_s();
+</script><noscript><img width=1 height=1 alt="" src="http://csc.beap.ad.yieldmanager.net/i?bv=1.0.0&bs=(128bhudmd(gid$Nl.6XEWTW6BQEJKYSbMCwiM0YtLIik3GkpMADsz5,st$1304859284002881,v$1.0))&t=J-D"></noscript>
+<!-- p2.ydn.sp1.yahoo.com compressed/chunked Sun May  8 05:54:43 PDT 2011 -->
