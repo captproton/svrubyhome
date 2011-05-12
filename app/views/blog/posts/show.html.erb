@@ -1,0 +1,93 @@
+<% content_for:stylesheets do -%>
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?d/lib/yui/2.8.0r4/build/reset/reset-min.css&d/lib/yui/2.8.0r4/build/fonts/fonts-min.css&d/lib/yui/2.8.0r4/build/container/assets/skins/sam/container.css&os/mit/media/p/common/grids-min-84124.css&os/mit/media/p/common/presentation-min-25135.css&os/mit/media/m/base/modules-min-106186.css&kx/ucs/uh/css/200/yunivhead-min.css&kx/ucs/uh/css/194/logo-min.css&kx/ucs/search/css/163/search_all-min.css&kx/ucs/search/css/170/search_buttons-min.css&os/mit/media/m/header/header-min-49043.css&os/mit/media/m/navigation/navigation-min-78540.css&os/mit/media/m/ads/ads-min-109990.css&os/mit/media/m/linkbox/linkbox-min-105638.css&os/mit/media/m/footer/footer-links-min-84768.css&os/mit/media/m/trending/trending-min-103801.css&os/mit/media/m/footer/footer-info-min-65168.css" />
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/m/search/searchform-min-67238.css&os/mit/media/m/article/article-min-110216.css&os/mit/media/m/pagination/pagination-min-101346.css&d/lib/media/m/social_buttons/social-buttons-min-3947.css&os/mit/media/m/social/social-buttons-min-108171.css&os/mit/media/m/carousel/carousel-template-min-106113.css&os/mit/media/m/carousel/carousel-min-106121.css&os/mit/media/m/index/index-min-108942.css&os/mit/media/m/autos/modules-min-109046.css&os/mit/media/m/accordion/node-accordion-core-min-83270.css&os/mit/media/m/accordion/modules-min-77038.css&d/ugcwidgets/ugccmt/ugccmt-min-1.4.1.8.css" />
+
+	<link rel="stylesheet" href="http://l.yimg.com/os/mit/media/m/article/print-min-56105.css" type="text/css" media="print"></link>
+
+	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-108859.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108307.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-111755.css" />
+<% end -%>
+<%- content_for :javascripts do -%>
+
+<% end -%>
+
+
+<% content_for :body_content_left do %>
+  <div id="show_blog_post">
+    <%= render 'post' %>
+  </div>
+
+  <% if BlogPost.comments_allowed? %>
+    <aside id="comments">
+      <h2><%= t('.comments.title') %></h2>
+      <% if (comments = @blog_post.comments.approved).any? %>
+        <%= render :partial => "comment", :collection => comments %>
+      <% else %>
+        <p>
+          <%= t('blog.shared.comments.none') %>.
+        </p>
+      <% end %>
+
+      <% flash.each do |key, value| %>
+        <div id='flash' class="flash flash_<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+
+      <h2><%= t('.comments.add') %></h2>
+      <%= form_for [:blog_post, @blog_comment] do |f| %>
+        <%= render :partial => "/shared/admin/error_messages",
+                   :locals => {
+                     :object => f.object,
+                     :include_object_name => true
+                   } %>
+        <div class='field'>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class='field'>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+        <div class='field message_field'>
+          <%= f.label :message %>
+          <%= f.text_area :message, :rows => 6 %>
+        </div>
+        <div class='field form-actions'>
+          <%= f.submit t('.submit') %>
+        </div>
+      <% end %>
+    </aside>
+  <% end %>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <%= render :partial => "/blog/shared/categories" %>
+  <%= render :partial => "/blog/shared/posts" %>
+  <%= render :partial => "/blog/shared/rss_feed" %>
+  <%= blog_archive_list %>
+<% end %>
+
+<%= render :partial => "/shared/content_page", :locals => { :remove_automatic_sections => true }  %>
+
+<% if Refinery.version < '0.9.9' %>
+  <% content_for :head_libraries, jquery_include_tags(:jquery_ui => false) %>
+  <% content_for :head do %>
+    <%= stylesheet_link_tag 'refinerycms-blog' %>
+    <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
+    <%#= javascript_include_tag('refinerycms-blog') %>
+    <% if BlogPost::ShareThis.enabled? %>
+      <script src="http://w.sharethis.com/button/buttons.js"></script>
+      <script>stLight.options({publisher:'<%= BlogPost::ShareThis.key %>'});</script>
+    <% end %>
+  <% end %>
+<% else %>
+  <% content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>
+  <% content_for :before_javascript_libraries, jquery_include_tags(:jquery_ui => false) %>
+  <% content_for :javascripts do %>
+    <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
+    <%#= javascript_include_tag('refinerycms-blog') %>
+    <script src="http://w.sharethis.com/button/buttons.js"></script>
+    <script>stLight.options({publisher:'<%= BlogPost::ShareThis.key %>'});</script>
+  <% end if BlogPost::ShareThis.enabled? %>
+<% end %>

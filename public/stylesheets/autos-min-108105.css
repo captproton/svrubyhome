@@ -1,0 +1,1796 @@
+/* base.css 103773 */ html {
+background-color: transparent
+}
+body {
+background-color: #fff
+}
+.yog-bd {
+background-color: #fff
+}
+blockquote,.story .txt {
+color: #333
+}
+cite,.story .txt cite,.yom-mod .info {
+color: #666
+}
+blockquote:before,blockquote:after {
+color: #ccc
+}
+blockquote cite {
+color: #999
+}
+.yom-mod .hd h2,.yom-mod .hd h2 a,.yom-mod .hd h3,.yom-mod .hd h3 a {
+color: #222
+}
+.yom-secondary .yom-mod {
+border-color: #ddd
+}
+.yom-primary .yom-mod .yom-mod,.yom-section .yom-section,.yom-section .yog-wrap,.yom-list li,.yom-featured-topics li,.yom-table-list .yom-list li,.yom-jumbotron .yog-5u .last,.yom-media-gallery .yom-mod,.yom-mod .yom-button,.yom-mod .yom-button-2,.yom-mod .yom-button-list .last .yom-button,.yog-rtl .yom-mod .yom-button-list .first .yom-button {
+border-color: #ccc
+}
+.yom-bar {
+border-color: #ddd;
+background-color: #f2f2f2;
+background-image: -moz-linear-gradient(top,#f2f2f2 0,#eee 100%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f2f2f2),color-stop(1,#eee))
+}
+.yom-stage .yom-secondary .yom-mod {
+border: 1px solid #eee;
+border-top: 3px solid #000;
+background: #fff
+}
+.yom-stage .yom-secondary .yom-mod .hd {
+padding: 16px 0 14px
+}
+.yog-16u .yog-16u {
+margin: 0;
+padding: 0
+}
+.yog-16u .yog-16u .yom-section .yog-wrap {
+border-top: 1px dotted #ccc
+}
+.yog-16u .yog-16u .yom-section .yog-wrap:first-child {
+border-top: none
+}
+.media .content a {
+color: #fff
+}
+.yom-mod .tabs,.yom-mod .tabs li,.yom-mod .tabs .selected {
+border-color: #bbb
+}
+.yom-secondary .yom-ad {
+background: #eee
+}
+.yom-pagination1 .pages a,.yom-pagination1 .pages strong {
+border-color: #ddd
+}
+.yom-pagination .ft {
+color: #bbb
+}
+.yom-nav .nav .nav-stack {
+border-color: #ddd;
+background-color: #fff;
+background-image: -moz-linear-gradient(top,#fff 0,#f2f2f2 100%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(1,#f2f2f2))
+}
+.yom-nav .nav .nav-stack li.on a,.yom-nav .nav .nav-stack li a:hover {
+background: #f2f2f2
+}
+.yom-nav .nav .nav-stack li.selected a,.yom-nav .nav .nav-stack li.selected a:hover {
+color: #333
+}
+.yom-nav .nav .nav-stack li.on .nav-sub {
+border: none
+}
+.yom-nav .nav .nav-stack li.on .nav-sub .entries {
+background: #f2f2f2
+}
+.yom-nav .nav .nav-stack li.on .nav-sub .entries li a:hover {
+background: #eee
+}
+.yom-nav .nav .nav-0 li a {
+color: #fff
+}
+.yom-nav .nav .nav-0 li.on li a,.yom-nav .nav .nav-0 li.on li a:hover,.yom-nav .nav .nav-0 li.on li a:hover,.yom-nav .nav .nav-0 li.on li.selected {
+background: none
+}
+.yom-nav .nav .nav-0 li.on li.selected a {
+color: #fff
+}
+.yom-nav .nav .nav-0 li.selected a,.yom-nav .nav .nav-0 li.selected a:hover {
+border-color: #ccc;
+background-color: #fff;
+background-image: -moz-linear-gradient(top,#fff 0,#ddd 5%,#fff 55%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(0.05,#ddd),color-stop(0.55,#fff))
+}
+.yom-nav .nav .nav-0 li .arrow em {
+border-color: #aaa transparent transparent
+}
+.yom-linkbox-horizontal .hd h2,.yom-trending-horizontal .hd h2 {
+color: #fff;
+background: #bbb
+}
+.yom-linkbox-horizontal .hd .arrow,.yom-trending-horizontal .hd .arrow {
+border-color: transparent transparent transparent #bbb
+}
+.yog-rtl .yom-linkbox-horizontal .hd .arrow,.yog-rtl .yom-trending-horizontal .hd .arrow {
+border-color: transparent #bbb transparent transparent
+}
+.social-buttons .yui3-ymsb {
+border-color: #ddd
+}
+.yom-comments ul.mwpphu-ul_links li a.mwpphu-disabled,.yom-comments .mwpphu-comment cite .mwpphu-timestamp,.yom-comments .mwpphu-post-form .mwpphu-count {
+color: #777
+}
+.yom-comments h2.mwpphu-comments,.yom-comments h3.mwpphu-comments,.yom-comments h2.mwpphu-comments-noposting,.yom-comments h3.mwpphu-comments-noposting,.yom-comments .mwpphu-post-form .mwpphu-title {
+color: #444
+}
+.yom-comments .mwpphu-post-form .mwpphu-bd textarea {
+width: 98%
+}
+.yom-art-hd .subheadline {
+color: #444
+}
+.yom-art-hd .byline {
+color: #777
+}
+.yom-art-bd .yog-5u li,.yom-art-lead li {
+color: #444
+}
+.yom-art-bd .yog-5u p em,.yom-art-lead p em {
+color: #777
+}
+.yom-art-related+.yom-buzz-tracker,.yom-art-related li.slideshow+li.story,.yom-art-related li.photo+li.story,.yom-art-related li.video+li.story {
+border-top-color: #ddd
+}
+.yom-art-related li.story+li.slideshow,.yom-art-related li.story+li.photo,.yom-art-related li.story+li.video {
+border-top-color: #ddd
+}
+.yom-blog-authors a {
+font-weight: bold
+}
+.yom-blog-authors .bd,.yom-blog-authors .ft {
+color: #777
+}
+.yom-blog-authors .bd li {
+border-bottom-color: #ddd
+}
+.yom-blog-authors div.bd+div.ft {
+border-top-color: #ddd
+}
+.yom-blog-authors .links.sep li {
+border-right-color: #ddd
+}
+.yom-blog-authors .links.sep .icon-twitter-small {
+background-position: 0 -794px;
+padding-bottom: 7px;
+padding-top: 7px
+}
+.yom-blog-authors .links.sep .icon-rss-small {
+background-position: 0 -894px;
+padding-bottom: 7px;
+padding-top: 7px
+}
+.yom-blog-index .entry {
+border-bottom-color: #ddd
+}
+.yom-blog-list li {
+color: #777
+}
+.yom-breaking-news .hd h3 {
+background: #c00
+}
+.yom-breaking-news .hd h3 em {
+font-weight: bold;
+color: #fff
+}
+.yom-breaking-news .bd {
+background: #fffce6;
+border-color: #f8edc9
+}
+.yom-breaking-news .bd h4 {
+color: #666
+}
+.story-list ul.thumbnail p {
+color: #666
+}
+.story-list .null {
+color: #111
+}
+.most-popular-list .num {
+color: #555
+}
+.most-popular-list .txt p {
+color: #777
+}
+.yom-featured-list .story {
+border-color: #ddd
+}
+.yom-featured-list .blog .story .img img {
+border-color: #222
+}
+.yom-featured-list .blog .story .txt span {
+border-color: #555;
+color: #fff;
+background-color: #999;
+background-image: -moz-linear-gradient(top,#999,#666);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#999),color-stop(1,#666))
+}
+.yom-featured-list .blog .story .txt span a {
+color: #fff
+}
+.yom-tweets .bd .img img {
+border-color: #bbb
+}
+.yom-tweets .bd .txt p {
+color: #555
+}
+.yom-rss .yom-list li {
+background: none;
+color: #666;
+border-color: #fff!important
+}
+.yom-rss .yom-list li.on {
+border-color: #eee!important;
+background: #f2f2f2
+}
+.yom-sitemap-bar .bd {
+background-color: #fff;
+background-image: -moz-linear-gradient(center top,#f7f7f7 0,#fff 50%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(0.5,#fff))
+}
+.yom-sitemap-bar .bd {
+border-color: #ddd
+}
+.yom-rss .yui3-overlay-content {
+background: #ccc;
+background: rgba(204,204,204,0.25)
+}
+.yom-sitemap-bar .yui3-overlay-content {
+background: #ccc;
+background: rgba(204,204,204,0.25)
+}
+.yom-rss .yui3-overlay .yui3-widget-bd,.yom-sitemap-bar .yui3-overlay .yui3-widget-bd {
+background-color: #fff;
+background-image: -moz-linear-gradient(center top,#f7f7f7 25%,#fff 100%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.25,#f7f7f7),color-stop(1,#fff))
+}
+.yom-rss .yui3-overlay .yui3-widget-bd span,.yom-sitemap-bar .yui3-overlay .yui3-widget-bd span {
+color: #666
+}
+.yom-local-news li:hover {
+background-color: #fafafa
+}
+.yom-local-news li em {
+color: #777
+}
+.yom-local-providers p {
+color: #666
+}
+.yom-rss-feed input.feed-text {
+color: #ccc
+}
+.yom-rss-feed input.feed-submit {border-color #C49F29
+}
+.yog-page .yom-jumbotron {
+border-top: none;
+background: none
+}
+.yom-jumbotron a,.yom-jumbotron p,.yom-jumbotron .ribbon {
+color: #fff
+}
+.yom-jumbotron .yom-mod {
+background: #fff
+}
+.yom-jumbotron cite {
+color: #999!important
+}
+.yom-jumbotron .bd .yom-mod .ft p {
+color: #ccc
+}
+.yom-jumbotron .yom-mod .content .yom-list {
+border-color: #ccc
+}
+.yom-jumbotron .no-image p {
+color: #666!important
+}
+.yom-jumbotron .jumbotron-slider ul.slider li a:hover,.yom-jumbotron .jumbotron-slider ul.slider a.active {
+background: #eee
+}
+.yom-jumbotron .jumbotron-slider .info .more {
+border-color: #999;
+color: #444
+}
+.yom-jumbotron .ribbon {
+color: #fff
+}
+.idx-mod .yui-carousel-pagination {
+color: #555
+}
+.idx-mod .yui-carousel-element .item p em {
+color: #999
+}
+.ls_thmb_ttle_cptn_atrb .item p {
+color: #555
+}
+.ls_thmb_ttle_cptn_atrb .item cite {
+color: #333
+}
+.ymg-carousel.md_thmb_ovrly .yui-carousel-item h3 a:visited {
+color: #ccc
+}
+.yog-wrap .photo-gallery-thumbs .outer-bd {
+border-color: #bbb
+}
+.yui-carousel-nav .yui-carousel-next span {
+border-color: #ddd
+}
+.mod-photo-otd .yui-carousel-pagination,.photos-idx-mod .yui-carousel-pagination {
+color: #555
+}
+.ymg-tab .tabs .selected>a,.ymg-tab .tabs .selected li a.selected {
+color: black
+}
+.ymg-tab .tabs .selected li a.selected,.ymg-tab .tabs .selected .lbl {
+color: black
+}
+.photos-idx-mod .ymg-tab-content .thumb {
+background-color: #eee
+}
+.photos-idx-mod .ymg-tab-content .cptn {
+color: #bbb
+}
+.ymg-carousel.sm_thmb_title_count p {
+color: #ccc
+}
+.lg_thmb_ovrly .item,.md_thmb_cptn a,.sm_thmb_title_count a,.lg_date_ttle_cptn_viewlnk .item a.thumb {
+background-color: #f2f2f2
+}
+.photo-gallery-mod-related li {
+border-color: #bbb
+}
+.photo-gallery-mod-related li .thumb {
+background-color: #f2f2f2
+}
+.lg_date_ttle_cptn_viewlnk .date {
+color: #444
+}
+.lg_date_ttle_cptn_viewlnk h3 a {
+color: #111
+}
+.lg_date_ttle_cptn_viewlnk .cptn a {
+color: #444
+}
+.photos-idx-mod .ymg-nav-buttons .yui-carousel-prev span,.mod-photo-otd .ymg-nav-buttons .yui-carousel-prev span {
+background-position: 9px -944px
+}
+.photos-idx-mod .ymg-nav-buttons .yui-carousel-first-button-disabled span,.mod-photo-otd .ymg-nav-buttons .yui-carousel-first-button-disabled span {
+background-position: 9px -894px
+}
+.photos-idx-mod .ymg-nav-buttons .yui-carousel-next span,.mod-photo-otd .ymg-nav-buttons .yui-carousel-next span {
+background-position: 9px -744px
+}
+.photos-idx-mod .ymg-nav-buttons .yui-carousel-button-disabled span,.mod-photo-otd .ymg-nav-buttons .yui-carousel-button-disabled span {
+background-position: 9px -694px
+}
+/* base-imagery.css 107649 */ .img-map,.yom-list li,.icon-search,.yom-mod form .yom-field-search,.icon-led,.icon-led-on,.icon-twitter-small,.icon-twitter-small-blue,.icon-twitter-large-blue,.icon-twitter-bird-blue,.icon-twitter-small-white,.icon-twitter-large-white,.icon-twitter-bird-white,.icon-rss-small,.icon-ybang-small,.icon-ybang,.icon-popup,.icon-info-small,.icon-info,.icon-info-large,.icon-info-xlarge,.icon-answers-logo,.icon-answers-star,.icon-myyahoo,.icon-trash,.icon-alert-small,.icon-alert-medium,.icon-alert-large,.icon-alert,.icon-success-small,.icon-success-medium,.icon-success-large,.icon-success {
+background-image: url(http://l.yimg.com/os/mit/media/themes/base/images/map_ltr-97816.png);
+background-repeat: no-repeat
+}
+.yog-rtl .img-map,.yog-rtl .yom-list li,.yog-rtl .icon-search,.yog-rtl .yom-mod form .yom-field-search,.yog-rtl .icon-led,.yog-rtl .icon-led-on,.yog-rtl .icon-twitter-small,.yog-rtl .icon-twitter-small-blue,.yog-rtl .icon-twitter-large-blue,.yog-rtl .icon-twitter-bird-blue,.yog-rtl .icon-twitter-small-white,.yog-rtl .icon-twitter-large-white,.yog-rtl .icon-twitter-bird-white,.yog-rtl .icon-rss-small,.yog-rtl .icon-ybang-small,.yog-rtl .icon-ybang,.yog-rtl .icon-popup,.yog-rtl .icon-info-small,.yog-rtl .icon-info,.yog-rtl .icon-info-large,.yog-rtl .icon-info-xlarge,.yog-rtl .icon-answers-logo,.yog-rtl .icon-answers-star,.yog-rtl .icon-myyahoo,.yog-rtl .icon-trash,.yog-rtl .icon-alert-small,.yog-rtl .icon-alert-medium,.yog-rtl .icon-alert-large,.yog-rtl .icon-alert,.yog-rtl .icon-success-small,.yog-rtl .icon-success-medium,.yog-rtl .icon-success-large,.yog-rtl .icon-success {
+background-image: url(http://l.yimg.com/os/mit/media/themes/base/images/map_rtl-97816.png)
+}
+.yom-list li {
+background-position: left 10px
+}
+.yog-rtl .yom-list li {
+background-position: right 10px
+}
+.yom-list-large li {
+background-position: left 12px
+}
+.yog-rtl .yom-list-large li {
+background-position: right 12px
+}
+.yom-list-wide li,.yom-list-xlarge li {
+background-position: left -282px
+}
+.yog-rtl .yom-list-wide li,.yog-rtl .yom-list-xlarge li {
+background-position: right -282px
+}
+.icon-search,.yom-mod form .yom-field-search {
+background-position: 0 -597px
+}
+.yog-rtl .icon-search,.yog-rtl .yom-mod form .yom-field-search {
+background-position: right -597px
+}
+.icon-led {
+background-position: 0 -700px
+}
+.yog-rtl .icon-led {
+background-position: right -700px
+}
+.icon-led-on {
+background-position: 0 -730px
+}
+.yog-rtl .icon-led-on {
+background-position: right -730px
+}
+.icon-twitter-small {
+padding-left: 20px;
+background-position: left -800px
+}
+.yog-rtl .icon-twitter-small {
+padding-right: 20px;
+padding-left: 0;
+background-position: right -800px
+}
+.icon-rss-small {
+padding-left: 20px;
+background-position: -0 -900px
+}
+.yog-rtl .icon-rss-small {
+padding-right: 20px;
+padding-left: 0;
+background-position: right -900px
+}
+.icon-facebook {
+padding-left: 20px;
+background-position: -0 -1000px
+}
+.yog-rtl .icon-facebook {
+padding-right: 20px;
+padding-left: 0;
+background-position: right -1000px
+}
+.icon-ybang-small {
+padding-left: 26px;
+background-position: left -1100px
+}
+.yog-rtl .icon-ybang-small {
+padding-right: 26px;
+padding-left: 0;
+background-position: right -1100px
+}
+.icon-ybang {
+padding-left: 35px;
+background-position: left -1200px
+}
+.yog-rtl .icon-ybang {
+padding-right: 35px;
+padding-left: 0;
+background-position: right -1200px
+}
+.icon-popup {
+padding-left: 15px;
+background-position: left -1300px
+}
+.yog-rtl .icon-popup {
+padding-right: 15px;
+padding-left: 0;
+background-position: right -1300px
+}
+.icon-info {
+padding-left: 35px;
+background-position: left -1400px
+}
+.yog-rtl .icon-info {
+padding-right: 35px;
+padding-left: 0;
+background-position: right -1400px
+}
+.icon-myyahoo {
+background-position: left -1500px
+}
+.yog-rtl .icon-myyahoo {
+background-position: right -1500px
+}
+.icon-close {
+background-position: left -1600px
+}
+.yog-rtl .icon-close {
+background-position: right -1600px
+}
+.icon-trash {
+background-position: left -1700px
+}
+.yog-rtl .icon-trash {
+background-position: right -1700px
+}
+.icon-alert-small {
+background-position: left -1800px
+}
+.yog-rtl .icon-alert-small {
+background-position: right -1800px
+}
+.icon-alert-medium {
+background-position: left -1900px
+}
+.yog-rtl .icon-alert-medium {
+background-position: right -1900px
+}
+.icon-alert-large {
+background-position: left -2000px
+}
+.yog-rtl .icon-alert-large {
+background-position: right -2000px
+}
+.icon-success-small {
+background-position: left -2100px
+}
+.yog-rtl .icon-success-small {
+background-position: right -2100px
+}
+.icon-success-medium {
+background-position: left -2200px
+}
+.yog-rtl .icon-success-medium {
+background-position: right -2200px
+}
+.icon-success-large {
+background-position: left -2300px
+}
+.yog-rtl .icon-success-large {
+background-position: right -2300px
+}
+.icon-info-small {
+background-position: left -2400px
+}
+.yog-rtl .icon-info-small {
+background-position: right -2400px
+}
+.icon-info-large {
+background-position: left -2500px
+}
+.yog-rtl .icon-info-large {
+background-position: right -2500px
+}
+.icon-info-xlarge {
+background-position: left -2600px
+}
+.yog-rtl .icon-info-xlarge {
+background-position: right -2600px
+}
+.icon-answers-logo {
+background-position: left -2700px
+}
+.yog-rtl .icon-answers-logo {
+background-position: right -2700px
+}
+.icon-answers-star {
+background-position: left -2800px
+}
+.yog-rtl .icon-answers-star {
+background-position: right -2800px
+}
+.icon-twitter-large-blue {
+background-position: left -2900px
+}
+.yog-rtl .icon-twitter-large-blue {
+background-position: right -2900px
+}
+.icon-twitter-small-blue {
+background-position: left -3000px
+}
+.yog-rtl .icon-twitter-small-blue {
+background-position: right -3000px
+}
+.icon-twitter-bird-blue {
+background-position: left -3100px
+}
+.yog-rtl .icon-twitter-bird-blue {
+background-position: right -3100px
+}
+.icon-twitter-large-white {
+background-position: left -3200px
+}
+.yog-rtl .icon-twitter-large-white {
+background-position: right -3200px
+}
+.icon-twitter-small-white {
+background-position: left -3300px
+}
+.yog-rtl .icon-twitter-small-white {
+background-position: right -3300px
+}
+.icon-twitter-bird-white {
+background-position: left -3400px
+}
+.yog-rtl .icon-twitter-bird-white {
+background-position: right -3400px
+}
+.icon-play-small {
+background-position: left 0
+}
+.yog-rtl .icon-play-small {
+background-position: right 0
+}
+.yom-mod .media .play {
+padding-left: 29px;
+background-position: 4px 5px
+}
+.yog-rtl .yom-mod .media .play {
+padding-right: 25px;
+padding-left: 0;
+background-position: 98% 5px
+}
+.icon-play-medium {
+background-position: left -100px
+}
+.yog-rtl .icon-play-medium {
+background-position: right -100px
+}
+.yom-mod .media .play.lg {
+padding-left: 38px;
+background-position: left -95px
+}
+.yog-rtl .yom-mod .media .play.lg {
+padding-right: 38px;
+padding-left: 0;
+background-position: 98% -95px
+}
+.icon-play-large {
+background-position: left -200px
+}
+.yog-rtl .icon-play-large {
+background-position: right -200px
+}
+.icon-play-xsmall {
+background-position: left -1856
+}
+.yog-rtl .icon-play-xsmall {
+background-position: right -1856
+}
+.icon-list-simple {
+background-position: left -300px
+}
+.yog-rtl .icon-list-simple {
+background-position: right -300px
+}
+.on>.icon-list-simple {
+background-position: left -350px
+}
+.yog-rtl .on>.icon-list-simple {
+background-position: right -350px
+}
+.icon-list-title {
+background-position: left -400px
+}
+.yog-rtl .icon-list-title {
+background-position: right -400px
+}
+.on>.icon-list-title {
+background-position: left -450px
+}
+.yog-rtl .on>.icon-list-title {
+background-position: right -450px
+}
+.icon-list-imagetext {
+background-position: left -500px
+}
+.yog-rtl .icon-list-imagetext {
+background-position: right -500px
+}
+.on>.icon-list-imagetext {
+background-position: left -550px
+}
+.yog-rtl .on>.icon-list-imagetext {
+background-position: right -550px
+}
+.icon-list-imagefirst {
+background-position: left -600px
+}
+.yog-rtl .icon-list-imagefirst {
+background-position: right -600px
+}
+.on>.icon-list-imagefirst {
+background-position: left -650px
+}
+.yog-rtl .on>.icon-list-imagefirst {
+background-position: right -650px
+}
+.icon-next {
+background-position: left -700px
+}
+.yog-rtl .icon-next {
+background-position: right -700px
+}
+.on>.icon-next {
+background-position: left -750px
+}
+.yog-rtl .on>.icon-next {
+background-position: right -750px
+}
+.icon-last {
+background-position: left -800px
+}
+.yog-rtl .icon-last {
+background-position: right -800px
+}
+.on>.icon-last {
+background-position: left -850px
+}
+.yog-rtl .on>.icon-last {
+background-position: right -850px
+}
+.icon-prev {
+background-position: left -900px
+}
+.yog-rtl .icon-prev {
+background-position: right -900px
+}
+.on>.icon-prev {
+background-position: left -950px
+}
+.yog-rtl .on>.icon-prev {
+background-position: right -950px
+}
+.icon-first {
+background-position: left -1000px
+}
+.yog-rtl .icon-first {
+background-position: right -1000px
+}
+.on>.icon-first {
+background-position: left -1050px
+}
+.yog-rtl .on>.icon-first {
+background-position: right -1050px
+}
+.yom-mod .icon-arrow-next-1 {
+width: 6px;
+height: 10px;
+background-position: left -750px
+}
+.yom-mod .icon-arrow-next-2 {
+width: 6px;
+height: 10px;
+background-position: left -700px
+}
+.yom-mod .icon-arrow-last-1 {
+width: 9px;
+height: 10px;
+background-position: left -850px
+}
+.yom-mod .icon-arrow-last-2 {
+width: 9px;
+height: 10px;
+background-position: left -800px
+}
+.yom-mod .icon-arrow-prev-1 {
+width: 6px;
+height: 10px;
+background-position: left -950px
+}
+.yom-mod .icon-arrow-prev-2 {
+width: 6px;
+height: 10px;
+background-position: left -900px
+}
+.yom-mod .icon-arrow-first-1 {
+width: 9px;
+height: 10px;
+background-position: left -1050px
+}
+.yom-mod .icon-arrow-first-2 {
+width: 9px;
+height: 10px;
+background-position: left -1000px
+}
+.yog-rtl .yom-mod .icon-arrow-next-1 {
+width: 6px;
+height: 10px;
+background-position: right -750px
+}
+.yog-rtl .yom-mod .icon-arrow-next-2 {
+width: 6px;
+height: 10px;
+background-position: right -700px
+}
+.yog-rtl .yom-mod .icon-arrow-last-1 {
+width: 9px;
+height: 10px;
+background-position: right -850px
+}
+.yog-rtl .yom-mod .icon-arrow-last-2 {
+width: 9px;
+height: 10px;
+background-position: right -800px
+}
+.yog-rtl .yom-mod .icon-arrow-prev-1 {
+width: 6px;
+height: 10px;
+background-position: right -950px
+}
+.yog-rtl .yom-mod .icon-arrow-prev-2 {
+width: 6px;
+height: 10px;
+background-position: right -900px
+}
+.yog-rtl .yom-mod .icon-arrow-first-1 {
+width: 9px;
+height: 10px;
+background-position: right -1050px
+}
+.yog-rtl .yom-mod .icon-arrow-first-2 {
+width: 9px;
+height: 10px;
+background-position: right -1000px
+}
+.icon-thumbnail {
+background-position: left -1100px
+}
+.yog-rtl .icon-thumbnail {
+background-position: right -1000px
+}
+.icon-embed {
+background-position: left -1150px
+}
+.yog-rtl .icon-embed {
+background-position: right -1150px
+}
+.icon-link {
+background-position: left -1200px
+}
+.yog-rtl .icon-link {
+background-position: right -1200px
+}
+.icon-like {
+background-position: left -1250px
+}
+.yog-rtl .icon-like {
+background-position: right -1250px
+}
+.icon-replay {
+background-position: left -1300px
+}
+.yog-rtl .icon-replay {
+background-position: right -1300px
+}
+.icon-miniplay {
+background-position: left -1350px
+}
+.yog-rtl .icon-miniplay {
+background-position: right -1350px
+}
+.on>.icon-miniplay {
+background-position: left -1400px
+}
+.yog-rtl .on .icon-miniplay {
+background-position: right -1400px
+}
+.icon-comments-bang {
+background-position: left -1450px
+}
+.yog-rtl .icon-comments-bang {
+background-position: right -1450px
+}
+.icon-comments {
+background-position: left -1500px
+}
+.yog-rtl .icon-comments {
+background-position: right -1500px
+}
+.icon-enlarge {
+background-position: left -1550px
+}
+.yog-rtl .icon-enlarge {
+background-position: right -1550px
+}
+.yom-mod .media .enlarge {
+padding-left: 29px;
+background-position: 5px -1542px
+}
+.yog-rtl .yom-mod .media .enlarge {
+padding-right: 29px;
+padding-left: 0;
+background-position: 98% -1542px
+}
+.icon-slideshow {
+background-position: left -1600px
+}
+.yog-rtl .icon-slideshow {
+background-position: right -1600px
+}
+.yom-mod .media .slideshow {
+padding-left: 27px;
+background-position: 5px -1590px
+}
+.yog-rtl .yom-mod .media .slideshow {
+padding-right: 27px;
+padding-left: 0;
+background-position: 98% -1590px
+}
+.icon-tv {
+background-position: left -1650px
+}
+.yog-rtl .icon-tv {
+background-position: right -1650px
+}
+.icon-video {
+background-position: left -1700px
+}
+.yog-rtl .icon-video {
+background-position: right -1700px
+}
+.icon-settings {
+background-position: left -1750px
+}
+.yog-rtl .icon-settings {
+background-position: right -1750px
+}
+.icon-settings {
+background-position: left -1800px
+}
+.yog-rtl .icon-settings {
+background-position: right -1800px
+}
+/* theme.css 108267 */ a {
+color: #005790
+}
+a:hover,.yom-mod .hd a.more:hover em,.media .content a:hover {
+color: #E99F00
+}
+.yog-bd .bd a:visited {
+color: #A1ABB2
+}
+.yog-24u>.yom-mod {
+border-color: #E99F00
+}
+.yom-section,.yom-primary .yom-mod,.yom-tooltip .yom-mod .bd {
+border-color: #E99F00
+}
+.yom-mod .arrow-up {
+border-color: transparent transparent #E99F00
+}
+.yom-mod .arrow-down {
+border-color: #E99F00 transparent transparent
+}
+.yom-mod .arrow-next,.yog-rtl .yom-mod .arrow-prev {
+border-color: transparent transparent transparent #E99F00
+}
+.yom-mod .arrow-prev,.yog-rtl .yom-mod .arrow-next {
+border-color: transparent #E99F00 transparent transparent
+}
+.yom-stage .yom-secondary .yom-mod {
+background: #090909;
+border-color: #E99F00;
+border-width: 3px 0 0;
+color: #FFF;
+padding-bottom: 10px
+}
+.yom-stage .yom-secondary .yom-mod .hd h2,.yom-stage .yom-secondary .yom-mod .hd h3 {
+color: #FFF
+}
+.yom-mod .tabs li.show-thumbs a:hover,.yom-mod .tabs li.hide-thumbs a:hover {
+color: #E99F00
+}
+.yog-hd {
+background: #0D0D0D;
+background-image: -moz-radial-gradient(26% 133% 45deg,circle farthest-corner,#0D0D0D 0,#444 1%,#0D0D0D 26%);
+background-image: -webkit-gradient(radial,26% 100%%,0,22% 50%,900,color-stop(0,#0D0D0D),color-stop(0,#444),color-stop(0.26,#0D0D0D))
+}
+.yom-nav .nav .nav-stack li .arrow em {
+border-color: #AAB transparent transparent
+}
+.yom-nav .nav .nav-stack {
+text-transform: capitalize
+}
+.yom-nav .nav .nav-0 {
+background: #000;
+background-color: rgba(0,0,0,0.15);
+border-color: transparent
+}
+.yom-nav .nav div.nav-0 {
+font-size: 93%
+}
+.yom-nav .nav .nav-1 {
+font-weight: bold
+}
+.yom-nav .nav li .nav-sub {
+background: #272727;
+color: #FFF
+}
+.yom-nav .nav .nav-0 li.on a,.yom-nav .nav .nav-0 li.on a:hover,.yom-nav .nav .nav-0 li a:hover {
+background: #272727;
+color: #FFF
+}
+.yom-nav .nav .nav-1 li a:hover {
+background: none
+}
+.yom-nav .nav .nav-0 li.on .nav-1 a {
+color: #FFF
+}
+.yom-nav .nav .nav-0 li a {
+background: #2C2C2C;
+background-image: -moz-linear-gradient(center 20%,#252525 0,#000 50%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#252525),color-stop(0.5,#000));
+border-color: #3C3C3C;
+color: #FFF
+}
+.yom-nav .nav .nav-0 li.selected a,.yom-nav .nav .nav-0 li.selected a:hover {
+border-color: #DDD;
+color: #000
+}
+.yom-nav .nav .nav-0 li.on .nav-sub {
+border: 1px solid #3C3C3C;
+border-top: none;
+-moz-box-shadow: 0 9px 10px rgba(0,0,0,0.80);
+-webkit-box-shadow: 0 9px 10px rgba(0,0,0,0.80);
+box-shadow: 0 9px 10px rgba(0,0,0,0.80)
+}
+.yom-nav .nav .nav-0 li.on .nav-sub .entries {
+background: #272727;
+border-color: #3C3C3C;
+border-top: none
+}
+.yom-nav .nav li.on .nav-sub .entries li a {
+font-weight: normal;
+font-size: 93%
+}
+.yom-nav .nav .nav-0 li.on .nav-sub .entries li:hover,.yom-nav .nav .nav-0 li.on .nav-sub .entries li a:hover {
+background: #333
+}
+.yom-nav .nav li.on .nav-sub .entries li a:hover {
+background: #000
+}
+.yom-footer-links {
+background: #0B0B0B
+}
+.yom-footer-links .yog-17u {
+background: #171717;
+background: rgba(255,255,255,0.07)
+}
+.yom-footer-links .yog-17u .yom-mod,.yog-rtl .yom-footer-links .yog-17u .yom-mod {
+background: transparent;
+border-color: #666
+}
+.yom-footer-info {
+background: #0B0B0B;
+border-top: 1px solid #1A1A1A
+}
+.yom-footer-info cite,.yom-footer-info span {
+color: #6B6B6B
+}
+.yom-footer-info a {
+color: #FFF
+}
+.yom-footer-info a:hover {
+color: #F90
+}
+.yom-trending-full {
+border-color: #616161
+}
+.yog-page .yom-stage {
+background-color: #111;
+background-image: -webkit-gradient(radial,center center,0,center center,700,from(#5F5F5F),to(#111));
+background-image: -moz-radial-gradient(50% 50%,circle,#5F5F5F 0,#111 75%);
+padding: 10px 0 0;
+margin-top: -10px
+}
+.yom-stage .yom-secondary .yom-mod a,.yom-stage .yom-secondary .yom-mod a em {
+color: #FFF
+}
+.yom-stage .yom-secondary .yom-mod .hd {
+padding: 15px 0 5px;
+border-bottom: 3px double #8A8A8A;
+margin: 0 0 10px 0
+}
+.yom-stage .yom-secondary .yom-mod .yom-list li {
+border-bottom: 1px solid #373737
+}
+.yom-stage .yom-secondary #medialist li {
+padding: 4px 0 4px 14px;
+background-position: left 10px;
+border-bottom: 1px solid #373737
+}
+.yom-stage .yom-secondary #medialist li.last {
+border: none
+}
+.yom-comments #mwpphu-comments-post a,.yom-comments .mwpphu-navigation a,.yom-comments ul.mwpphu-comments li a,.yom-comments .mwpphu-post-form a,.yom-comments .mwpphu-post-form .mwpphu-bd .mwpphu-reset {
+color: #005790
+}
+.yom-blog-index h1 {
+color: #324452
+}
+.yom-blog-index .entry {
+border-bottom-color: #DADADA
+}
+.yom-rss .yui3-overlay .yui3-widget-hd,.yom-sitemap-bar .yui3-overlay .yui3-widget-hd {
+color: #E99F00
+}
+.yom-jumbotron a:hover {
+color: #F90
+}
+.yom-jumbotron .no-image a {
+color: #005790
+}
+.yom-jumbotron .no-image a:hover {
+color: #F90
+}
+.yom-jumbotron .jumbotron-slider .info .more:hover {
+color: #F90
+}
+.idx-mod .yui-carousel-element .media:hover span,.photos-idx-mod .yui-carousel-element .media:hover span,.mod-photo-otd .yui-carousel-element .media:hover span,.idx-mod .md_thmb_ovrly .item h3 a:hover,.photos-idx-mod .md_thmb_ovrly .item h3 a:hover,.mod-photo-otd .md_thmb_ovrly .item h3 a:hover {
+color: #E99F00
+}
+.idx-mod .ymg-nav-buttons .yui-carousel-prev span {
+background-position: 9px -944px
+}
+.idx-mod .ymg-nav-buttons .yui-carousel-first-button-disabled span {
+background-position: 9px -894px
+}
+.idx-mod .ymg-nav-buttons .yui-carousel-next span {
+background-position: 9px -744px
+}
+.idx-mod .ymg-nav-buttons .yui-carousel-button-disabled span {
+background-position: 9px -694px
+}
+.ymg-tab .tabs .more,.ymg-tab .tabs .more .lbl {
+color: #E99F00
+}
+.ymg-tab .tabs .more>div {
+color: #E99F00
+}
+.yog-page .yom-badge-list {
+padding-bottom: 0
+}
+.yom-badge-list ol li a:hover {
+border-bottom: none
+}
+.yog-page .yom-stage .yom-badge-list {
+background: #000;
+background: rgba(0,0,0,0.2);
+border-bottom: none
+}
+.yom-badge-list ol li {
+padding-bottom: 1px;
+border-color: #CCC
+}
+.yom-stage .yom-badge-list ol li a {
+border-color: transparent
+}
+.yom-stage .yom-badge-list {
+margin-bottom: 10px
+}
+.photo-gallery-thumbs .buttons button a.icon-gallery {
+display: block;
+text-indent: 18px
+}
+.story .txt cite {
+font-size: 77%
+}
+.story-list ul.thumbnail p {
+font-size: 85%
+}
+#ymh-video-header {
+height: 38px
+}
+#ymh-video-header h2 {
+line-height: 36px
+}
+#ymh-video-header h2 .title {
+color: #FFF;
+font-size: 16px
+}
+/* theme-imagery.css 100135 */ .img-map-theme,.icon-play-small,.yom-mod .media .play,.icon-play-medium,.yom-mod .media .play.lg,.icon-play-large,.icon-list-simple,.icon-list-title,.icon-list-imagetext,.icon-list-imagefirst,.icon-next,.icon-last,.icon-prev,.icon-first,.yom-mod .icon-arrow-first-1,.yom-mod .icon-arrow-first-2,.yom-mod .icon-arrow-last-1,.yom-mod .icon-arrow-last-2,.yom-mod .icon-arrow-next-1,.yom-mod .icon-arrow-next-2,.yom-mod .icon-arrow-prev-1,.yom-mod .icon-arrow-prev-2,.icon-gallery,.icon-embed,.icon-link,.icon-like,.icon-replay,.icon-miniplay,.icon-comment-bang,.icon-comment,.icon-enlarge,.yom-mod .media .enlarge,.icon-slideshow,.yom-mod .media .slideshow,.icon-tv,.icon-video,.idx-mod .ymg-nav-buttons .yui-carousel-button span,.photos-idx-mod .ymg-nav-buttons .yui-carousel-button span,.mod-photo-otd .ymg-nav-buttons .yui-carousel-button span {
+background-image: url(http://l.yimg.com/os/mit/media/themes/black0d0d0d/images/map-theme_ltr-79164.png);
+background-repeat: no-repeat
+}
+.yog-rtl .img-map-theme,.yog-rtl .icon-play-small,.yog-rtl .yom-mod .media .play,.yog-rtl .icon-play-medium,.yog-rtl .yom-mod .media .play.lg,.yog-rtl .icon-play-large,.yog-rtl .icon-list-simple,.yog-rtl .icon-list-title,.yog-rtl .icon-list-imagetext,.yog-rtl .icon-list-imagefirst,.yog-rtl .icon-next,.yog-rtl .icon-last,.yog-rtl .icon-prev,.yog-rtl .icon-first,.yog-rtl .yom-mod .icon-arrow-first-1,.yog-rtl .yom-mod .icon-arrow-first-2,.yog-rtl .yom-mod .icon-arrow-last-1,.yog-rtl .yom-mod .icon-arrow-last-2,.yog-rtl .yom-mod .icon-arrow-next-1,.yog-rtl .yom-mod .icon-arrow-next-2,.yog-rtl .yom-mod .icon-arrow-prev-1,.yog-rtl .yom-mod .icon-arrow-prev-2,.yog-rtl .icon-thumbnail,.yog-rtl .icon-embed,.yog-rtl .icon-link,.yog-rtl .icon-like,.yog-rtl .icon-replay,.yog-rtl .icon-miniplay,.yog-rtl .icon-comments-bang,.yog-rtl .icon-comments,.yog-rtl .icon-enlarge,.yog-rtl .yom-mod .media .enlarge,.yog-rtl .icon-slideshow,.yog-rtl .yom-mod .media .slideshow,.yog-rtl .icon-tv,.yog-rtl .icon-video,.yog-rtl .idx-mod .ymg-nav-buttons .yui-carousel-button span,.yog-rtl .idx-mod .ymg-nav-buttons .yui-carousel-button span,.yog-rtl .photos-idx-mod .ymg-nav-buttons .yui-carousel-button span,.yog-rtl .mod-photo-otd .ymg-nav-buttons .yui-carousel-button span {
+background-image: url(http://l.yimg.com/os/mit/media/themes/black0d0d0d/images/map-theme_rtl-79164.png)
+}
+/* autos.css 108105 */ .yog-page .yog-bd a {
+color: #06C
+}
+.yog-page .yog-bd a:hover {
+color: #F90
+}
+.yog-page .yog-bd .bd a:visited {
+color: #06C
+}
+.yog-hd {
+background: #191A1B;
+background-image: -moz-linear-gradient(top,#191A1B,#737373);
+background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0,#191A1B),color-stop(1,#737373));
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/hdimg-98639.jpg") no-repeat transparent center top;
+background-color: #212224
+}
+.yom-nav .nav div.nav-0 {
+background-color: rgba(0,0,0,0.15)!important;
+background-color: #000;
+text-transform: uppercase;
+font-weight: bold
+}
+.yom-nav .nav div.nav-1 {
+text-transform: uppercase
+}
+.yom-nav .nav div.nav-1 ul li a:hover {
+color: #E99F00
+}
+.yom-nav .nav div.nav-2 {
+text-transform: uppercase
+}
+.yog-hd .yom-nav .nav .nav-0 li.selected a,.yog-hd .yom-nav .nav .nav-0 li.selected a:hover {
+color: #000
+}
+.yog-bd {
+background: #B4B7BE;
+background-image: -moz-linear-gradient(top,#8E9198,#B4B7BE 30%);
+background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0,#8E9198),color-stop(0.3,#B4B7Be));
+padding: 0
+}
+#searchform {
+background-color: #A2A4A0;
+background-image: -moz-linear-gradient(top,#dad8d9,#aaa 80%);
+background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0,#d0d0d0),color-stop(0.8,#aaa));
+border-bottom: 1px solid #666
+}
+#searchform .bd {
+padding: 4px 9px;
+margin: 0 auto;
+width: 952px
+}
+#searchform button {
+border: 1px solid #FAA;
+color: #444;
+margin-left: 4px;
+padding: 2px 15px
+}
+#searchform .yom-field-search {
+width: 260px
+}
+.yog-page .yog-bd .yom-mod .tabs {
+border-color: #BBB
+}
+.yog-page .yog-bd .yog-8u .yom-top-story .tabs {
+width: 300px
+}
+.yog-page .yog-bd .yom-mod .tabs li {
+border-color: #BBB;
+border-width: 1px
+}
+.yog-page .yog-bd .yom-mod .tabs .selected {
+border-bottom: 2px solid #FFF!important
+}
+.yog-page .yog-bd .yom-mod .tabs .selected a {
+color: #000
+}
+.yog-page .yog-bd .nav .tabs a,.yog-page .yog-bd .yom-top-story .nav .tabs a,.yog-page .yog-bd .yom-top-story .nav .tabs .selected>a {
+padding: 7px 12px 10px 10px
+}
+.yog-page .yog-bd .yom-top-story .bd .yom-list-large li .txt a {
+font-weight: normal;
+font-size: 100%
+}
+#yUnivHead {
+background: none;
+color: #FFF
+}
+#yuhead-hd #yuhead-mepanel-cont #yuhead-mepanel li {
+border-left-color: #616D89
+}
+#yUnivHead a {
+color: #FFF
+}
+#yUnivHead a:hover {
+color: #FFF
+}
+#yUnivHead .yuhead-logo h2 {
+background: url("http://localhost:3000/images/logo3.png") no-repeat scroll 0 0 transparent;
+height: 34px;
+width: 266px;
+margin-bottom: 10px
+}
+#yUnivHead .yucs-trending-anim .yucs-trending-anim-fade {
+background: transparent
+}
+#yuhead-hd #yuhead-promo a {
+color: #FFF
+}
+#yuhead-hd #yuhead-promo a:hover {
+color: #FFF
+}
+.yom-nav .nav .nav-0,.yom-nav .nav .nav-stack {
+border: none
+}
+.yom-nav .nav .nav-0 li a {
+border-color: #5D5F63;
+border-top: 1px solid #8B8B8C;
+border-left: 1px solid #5D5F63;
+border-bottom: none;
+font-size: 100%;
+background: 444444;
+background-image: -moz-linear-gradient(top,#444,#1D1D1D);
+background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0,#444),color-stop(1,#1D1D1D));
+color: #FFF
+}
+.yom-nav .nav .nav-0 li a:hover {
+background: #000
+}
+.yom-nav .nav .nav-0 li.selected a {
+background: #FFF;
+background-image: -moz-linear-gradient(top,#E3E3E3 10%,#FFF 50%);
+background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0.1,#E3E3E3),color-stop(0.5,#FFF));
+color: #000;
+font-weight: bold;
+border: 2px solid #FFF
+}
+.yog-page .yom-header {
+background-color: transparent
+}
+.yom-nav .nav .nav-1 li a {
+font-weight: bold;
+color: #06C;
+font-size: 100%;
+padding-top: 3px
+}
+.yom-nav .nav .nav-1.nav-stack li.first a {
+padding-left: 10px
+}
+.yom-nav .nav .nav-1 li.selected a {
+color: #000
+}
+div.yog-24u div.yog-24u {
+background-color: transparent
+}
+.yog-page .yog-bd .yog-24u {
+padding: 10px;
+border: none;
+background-color: #fff
+}
+.yog-page .yog-bd .yog-24u .yog-full {
+border: none
+}
+.yog-page .yog-bd .yog-24u .yog-24u {
+padding: 0;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none
+}
+.yom-footer-links {
+background: #4B525C;
+background-image: -moz-linear-gradient(left center,#4B525C 0,#5A616C 15%,#363C46 60%);
+background-image: -webkit-gradient(linear,left center,right center,color-stop(0,#4B525C),color-stop(0.15,#5A616C),color-stop(0.6,#363C46))
+}
+#footer-links .yog-24u {
+background-color: transparent
+}
+.yom-footer-links a,.yom-footer-links .yom-mod .hd h2,.yom-footer-links .yom-mod .hd h2 a {
+color: #CFCFCF
+}
+.yom-footer-links .yog-17u {
+background: #52565E
+}
+.yom-footer-links .yog-17u .yom-mod {
+border-right: 1px solid #797B81
+}
+#footer-info {
+background: #1F1F2B;
+color: #79798F
+}
+#footer-info a {
+color: #CECECE
+}
+.yog-bd .yom-art-content .bd {
+font: 13px helvetica;
+color: #000
+}
+.yog-bd .yom-art-content .bd p,.yog-bd .yom-art-content .bd div {
+margin-bottom: 10px;
+line-height: 1.231em
+}
+.yog-page .yog-bd .yom-jumbotron .bd a,.yog-page .yog-bd .yom-jumbotron .bd a:visited {
+color: #FFF!important
+}
+.yog-bd .yom-jumbotron .cubecross .yom-mod {
+height: 365px
+}
+.yog-bd .yom-jumbotron .bd .yom-mod .bd cite {
+color: #FFF!important;
+display: block
+}
+.yog-bd .yom-jumbotron .bd .no-image .bd h2 a,.yog-bd .yom-jumbotron .bd .no-image .ft .content a {
+color: #06C!important
+}
+.yog-bd .yom-jumbotron .bd .no-image .bd cite {
+color: #999!important
+}
+.yog-bd .social-buttons .yui3-ymsb {
+border-color: #DADADA;
+padding: 5px 0
+}
+.yog-bd .yom-primary #mediaproviderlinkbox,.yog-bd .yom-primary #mediaarticlerelated {
+border-top: double #DADADA
+}
+.yog-bd .yom-primary .yom-art-content table,.yog-bd .yom-primary .yom-art-content tbody,.yog-bd .yom-primary .yom-art-content tr {
+width: auto!important
+}
+.yog-bd .yom-art-related li.slideshow+li.story .yom-art-related li.photo+li.story,.yog-bd .yom-art-related li.video+li.story,.yog-bd .yom-art-related li.story+li.slideshow,.yog-bd .yom-art-related li.story+li.photo,.yog-bd .yom-art-related li.story+li.video,.yog-bd .yom-art-related+.yom-buzz-tracker {
+border-color: #DADADA
+}
+.yog-page .yog-bd .yom-primary .yog-wrap {
+border-color: #344E7F
+}
+.yog-page .yog-bd .yom-primary .idx-mod .yui-carousel-nav h2 {
+font-weight: bold;
+font-size: 100%
+}
+.yog-page .yog-bd .yom-primary .idx-mod .yui-carousel-nav h2 a {
+color: #000
+}
+.yog-page .yog-bd .yom-primary .idx-mod .yui-carousel-nav h2 a span {
+color: #06C;
+font-size: 131%
+}
+.yog-page .yog-bd .photo-gallery-thumbs {
+border-top: 3px solid #344E7F
+}
+.yog-page .yog-bd .yom-primary .yom-section-list .bd li {
+border-bottom: 1px dotted #CCC!important;
+padding: 5px 0 5px 14px
+}
+.yog-page .yog-bd .yom-primary .yog-8u .yom-featured-list {
+border-bottom: none;
+border-top: none
+}
+.yog-page .yog-bd .yog-8u .yom-featured-list .hd {
+padding: 5px 0 10px
+}
+.yog-page .yog-bd .yog-8u .yom-featured-list .bd {
+padding-top: 10px
+}
+.yog-page .yog-bd .yom-primary .yog-8u .yom-featured-list .bd ul h4 {
+font-weight: normal
+}
+.yog-page .yog-bd .yog-8u .yom-featured-list .bd li,.yog-page .yog-bd .yog-8u .yom-featured-list .bd li.last {
+border-bottom: 1px dotted #CCC!important;
+padding: 5px 0;
+clear: right;
+display: inline-block;
+width: 95%
+}
+.yog-page .yog-bd .yom-section-list .bd .yom-list li .img {
+padding-right: 10px;
+vertical-align: top;
+clear: left;
+float: left
+}
+.yog-page .yog-bd .yom-section-list .bd .yom-list li .img img {
+overflow: hidden
+}
+.yog-page .yog-bd .yom-section-list .bd .yom-list li h4,.yog-page .yog-bd .yom-section-list .bd .yom-list li cite {
+display: block;
+padding-top: 0;
+text-align: left
+}
+.yog-page .yog-bd .yom-primary .yog-8u .idx-mod {
+border-color: #344E7F;
+padding-bottom: 0
+}
+.yog-page .yog-bd .yog-16u #sponsor-info-linkbox {
+border-top: 3px solid #344E7F
+}
+.yog-page .yog-bd .yog-8u #sponsor-info-linkbox .hd {
+padding-top: 50px
+}
+.yog-page #seo-footer {
+background: #B4B7BE;
+margin-bottom: 0;
+padding: 0;
+margin-top: 0
+}
+.yog-page #seo-footer .yog-24u {
+padding: 0 10px;
+background: #fff;
+-moz-box-shadow: none;
+margin-top: -10px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox {
+border-top: 3px solid #369;
+padding: 10px;
+margin: 10px 0 10px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox .hd {
+padding: 0;
+font-size: 15px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox h2 {
+text-transform: none
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox a {
+font-size: 11px;
+color: #777
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox a:hover {
+text-decoration: underline
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox .bd {
+margin-top: 10px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox ul {
+border-right: 1px solid #eee;
+margin-right: -1px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox .yom-list li {
+background: none;
+padding: 0 5px 0 10px
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox ul.last {
+border-right: none
+}
+.yog-page #seo-footer .yog-24u #seo-footer-linkbox .first li {
+padding-left: 0
+}
+.yog-bd .idx-mod .ymg-nav-buttons .yui-carousel-button {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") no-repeat scroll 0 0 transparent;
+height: 22px;
+text-indent: -10000px;
+border: none;
+width: 25px;
+padding: 0
+}
+.yog-bd .idx-mod .ymg-nav-buttons .yui-carousel-prev {
+background-position: 0 -70px
+}
+.yog-bd .idx-mod .ymg-nav-buttons .yui-carousel-next {
+background-position: -24px -70px
+}
+.yog-bd .idx-mod .ymg-nav-buttons .yui-carousel-first-button-disabled {
+background-position: 0 0
+}
+.yog-bd .idx-mod .ymg-nav-buttons .yui-carousel-button-disabled {
+background-position: -24px 0
+}
+.yog-bd .story-view .hd ul li a {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") no-repeat scroll 0 -800px transparent
+}
+.yog-bd .story-view .hd ul li .on {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") repeat scroll 0 -750px transparent
+}
+.yog-bd .story-view .hd ul li.first a {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") repeat scroll 0 -600px transparent
+}
+.yog-bd .story-view .hd ul li.first .on {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") repeat scroll 0 -550px transparent
+}
+.yog-bd .story-view .bd .filter-change {
+background: url("http://l.yimg.com/os/mit/media/p/autos/images/site/autos/autos-76491.png") repeat scroll 0 -1361px transparent;
+color: #333;
+cursor: pointer;
+font-size: 93%;
+font-weight: bold
+}
+.yog-bd .yom-comments #mwpphu-comments-post a,.yog-bd .yom-comments .mwpphu-navigation a,.yog-bd .yom-comments ul.mwpphu-comments li a,.yog-bd .yom-comments .mwpphu-post-form a,.yog-bd .yom-comments .mwpphu-post-form .mwpphu-bd .mwpphu-reset {
+color: #06C
+}
+.yog-bd .yom-secondary #medialist .bd li {
+padding: 10px 0;
+border-bottom: 1px dotted #CCC
+}
+.yog-bd .yom-secondary #medialist .bd li.last {
+border: none
+}
+.yog-bd .yom-art-hd .bd a {
+display: inline-block
+}
+#story-list .bd ul li {
+background-image: url('')
+}
+#story-list-view {
+border: none;
+padding-bottom: 8px
+}
+#story-list-view div.hd {
+padding: 0
+}
+#story-list-view div.hd span.more-news ul,#story-list-view div.hd span.more-news cite {
+display: none
+}
+#story-list-view .bd .filter-list ul {
+border-top: 1px solid #ededed;
+border-bottom-color: #ddd;
+background-color: #f7f7f7;
+padding: 9px 0 9px 10px;
+margin-top: 11px
+}
+#story-list {
+border: none
+}
+#story-list ul.yom-list-wide li,#story-list ul.yom-list-xlarge li {
+border-bottom: 1px dotted #ccc;
+list-style-type: none;
+padding-left: 0
+}
+#story-list .story img {
+display: block;
+float: left;
+overflow: hidden
+}
+#story-list .story .txt cite {
+font-size: 70%;
+color: #888;
+padding-left: 5px
+}
+#story-list .story .txt p {
+font-size: 75%;
+color: #666;
+padding: 4px 0 0;
+display: block
+}
+#ymh-video-header h2 {
+color: #fff;
+font-size: 26px;
+font-weight: bold;
+line-height: 44px;
+padding-top: 10px
+}
+.yog-page .yog-bd .yog-24u .yog-24u .yog-full .yog-24u .yom-section {
+background: #333;
+overflow: hidden;
+padding-left: 10px;
+padding-right: 10px;
+margin-left: -10px;
+margin-bottom: -10px
+}
+.yog-bd .yog-24u .yog-24u .yog-full .yog-24u .yog-24u .yom-section .yog-24u .yog-8u #yom-ad-LREC {
+margin-top: 36px
+}
+.vglry_meta h1 {
+font-family: arial;
+font-size: 140%;
+padding-bottom: 5px
+}
+.yom-mod.vid-meta p.stats {
+margin-bottom: 1em
+}
+.yog-page .yog-bd .yog-24u .yom-tile .bd .headtext a,.yog-page .yog-bd .yog-24u .yom-tile .bd .headtext a:visited {
+color: #FFF
+}
+.yog-page .yog-bd .yog-24u .yom-featured-list .photo {
+padding-right: 17px
+}
+.yog-page .yog-bd .sponsor-head {
+float: right;
+vertical-align: middle
+}
+.yog-page .yog-bd .sponsor-head img {
+display: inline;
+margin: 10px 0 0 10px;
+vertical-align: middle
+}
+#filmstrip-thumbs-nav .buttons a.icon-gallery {
+padding-left: 20px
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media {
+display: block;
+background-color: #FFF
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media a img {
+width: 190px;
+height: 110px
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media .content {
+position: relative;
+background-color: #FFF
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media .content .wrap {
+color: #333
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media .content .wrap h4 {
+font-weight: normal
+}
+.yog-page .yog-bd .yog-5u .yom-featured-list li .media .content .wrap p {
+font-size: 85%
+}
+.yog-page .yog-bd .yom-list-wide li {
+font-size: 100%
+}
+.yog-page .yog-bd .yom-list-wide li .txt a {
+font-size: 108%
+}
+.yog-page .yog-bd .yom-list-wide li .txt span a {
+font-size: 93%;
+font-weight: normal
+}
+.yog-page .yog-bd .yom-list-wide li cite {
+font-size: 77%
+}
+.yog-page .yog-bd .photo-gallery-thumbs .buttons button a.icon-gallery {
+text-indent: 0
+}
+.yog-page .yog-bd .photo-gallery-page .buttons {
+top: 17px
+}
+.yog-page .yog-bd .yog-wrap .photo-gallery-page .thumbs {
+margin-top: -10px
+}
+.yog-page .yog-bd .yog-wrap .photo-gallery-page #show-gallery-btn {
+padding: 2px
+}
+.yog-page .yog-bd .yog-wrap .photo-gallery-page #filmstrip-thumbs-nav .tabs li a {
+padding: 3px
+}
+.yog-page .yog-bd .yog-wrap .photo-gallery-page #spotlight-ctrl .yui-carousel-nav {
+right: 100px
+}
+.yog-page .yog-bd #filmstrip-thumbs-nav .tabs .show-thumbs a span,#filmstrip-thumbs-nav .tabs .show-thumbs a span,.yog-page .yog-bd #filmstrip-thumbs-nav .tabs .show-thumbs a span,#filmstrip-thumbs-nav .tabs .hide-thumbs a span {
+padding-top: 2px!important;
+padding-bottom: 2px!important
+}
+.yog-page .yog-bd .yom-embed-and-link .icon {
+background-image: url("/media/modules/videos/assets/images/sprite-videos-24.png");
+height: 26px;
+width: 26px
+}
+.yog-page .yog-bd .yom-tile h1,.yog-page .yog-bd .yom-tile h2 {
+margin: 0;
+padding: 0
+}
+.yog-page .yog-bd .yom-tile div.headtext a {
+padding: 7px
+}
+.yog-page .yog-bd .yom-tile div.bd,.yog-page .yog-bd .yom-tile div.headtext a {
+height: 66px
+}
+.yom-section,.yom-primary .yom-mod,.yom-tooltip .yom-mod .bd {
+border-color: #344E7F
+}
+.story-list ul.thumbnail p {
+font-size: 100%
+}
+#yom-ad-SHOW3 {
+border-top: 0 none;
+padding-top: 10px
+}
+#yom-ad-SHOW3 h3 {
+font-weight: bold;
+text-transform: uppercase;
+text-align: left
+}
+#yom-ad-SHOW3 .bd .media {
+padding: 10px 0
+}
+#yom-ad-SHOW3 .bd .content {
+text-align: left;
+font-size: 85%;
+color: #666
+}
+#yom-ad-SHOW3 .bd .content h4 a {
+text-decoration: none
+}
+#yom-ad-OEM {
+border-color: #DDD;
+border-right: 0 none;
+border-style: double solid solid;
+border-width: 3px 0 0 1px;
+margin-bottom: 0;
+padding: 10px 0 20px 10px;
+position: relative
+}
+#yom-ad-OEM .tagline {
+text-align: left;
+font-weight: bold;
+font-size: 120%;
+padding-bottom: 20px;
+text-transform: uppercase
+}
+#yom-ad-OEM .tagline cite {
+color: #000
+}
+#yom-ad-OEM .logo {
+position: absolute;
+right: 0;
+top: 10px
+}
+#yom-ad-OEM ul li {
+background-image: url("http://l.yimg.com/os/mit/media/themes/base/images/map_ltr-97816.png");
+background-position: left 10px;
+background-repeat: no-repeat;
+margin-left: 5px;
+padding: 5px 0 0 15px;
+text-align: left
+}
+#yom-ad-OEM ul li a {
+color: #39f text-decoration:none
+}

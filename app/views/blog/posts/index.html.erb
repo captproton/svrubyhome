@@ -1,3 +1,31 @@
+<div id="MediaStoryListLP" class="yom-mod story-list story-list-lp">
+	<div class="hd"><h3>Blog</h3></div>
+		<div class="bd">
+			<ul class="yom-list-wide thumbnail">
+
+  <%-raw @page[Page.default_parts.first.to_sym] if Page.default_parts.any? -%>
+  <% if @blog_posts.any? %>
+    <!-- <section id="blog_posts"> -->
+      <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+      <%= will_paginate @blog_posts %>
+    <!-- </section> -->
+  <% else %>
+    <li><p><%= t('.no_blog_articles_yet') %></p></li>
+  <% end %>
+			</ul>
+		</div>
+	</div>
+</ul>
+<% content_for :body_content_right do %>
+  <%=raw @page[Page.default_parts.second.to_sym] if Page.default_parts.many? %>
+
+  <%= render :partial => "/blog/shared/categories" %>
+  <%= render :partial => "/blog/shared/rss_feed" %>
+  <%= blog_archive_list %>
+<% end %>
+
+<%# render :partial => "/shared/content_page" %>
+<%# content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>
 <% content_for:stylesheets do -%>
 	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?d/lib/yui/2.8.0r4/build/reset/reset-min.css&d/lib/yui/2.8.0r4/build/fonts/fonts-min.css&d/lib/yui/2.8.0r4/build/container/assets/skins/sam/container.css&os/mit/media/p/common/grids-min-84124.css&os/mit/media/p/common/presentation-min-25135.css&os/mit/media/m/base/modules-min-106186.css&kx/ucs/uh/css/200/yunivhead-min.css&kx/ucs/uh/css/194/logo-min.css&kx/ucs/search/css/163/search_all-min.css&kx/ucs/search/css/170/search_buttons-min.css&os/mit/media/m/header/header-min-49043.css&os/mit/media/m/navigation/navigation-min-78540.css&os/mit/media/m/ads/ads-min-109990.css&os/mit/media/m/linkbox/linkbox-min-105638.css&os/mit/media/m/footer/footer-links-min-84768.css&os/mit/media/m/trending/trending-min-103801.css&os/mit/media/m/footer/footer-info-min-65168.css" />
 
@@ -8,14 +36,3 @@
 
 	<!-- <link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-108859.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108307.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-111755.css" /> -->
 <% end -%>
-<%- content_for :javascripts do -%>
-
-<% end -%>
-
-<script>(function(){var decoded,parts=window.location.hash.split("="),valid=/^\/([\w\x80-\xFF\-^\/]+\/){0,3}(([\w\x80-\xFF\-]+)(\.html)?)?$/;if(2===parts.length&&"#crsl"===parts[0]){decoded=unescape(decodeURIComponent(parts[1]));if(valid.test(decoded)){window.location.href="/"+decoded.slice(1)}}YAHOO=window.YAHOO||{};YAHOO.Media=YAHOO.Media||{};YAHOO.Media.PreventDefaultHandler={oldClick:function(){return document.onclick}(),newClick:function(b){if("function"===typeof this.oldClick){this.oldClick.apply(this,Array.prototype.slice.call(arguments))}b=b||window.event;var a=b.target||b.srcElement;while(a){if(/(^|\s)prevent-default(\s|$)/.test(a.className)){if("function"===typeof b.preventDefault){b.preventDefault()}else{b.returnValue=false}break}a=a.parentNode}}};document.onclick=YAHOO.Media.PreventDefaultHandler.newClick;}());</script>
-
-
-<%# For the best way to modify this page with your own markup read %>
-<%# http://github.com/resolve/refinerycms-theming/blob/master/readme.md %>
-
-<%= render :partial => "/shared/content_page" %>

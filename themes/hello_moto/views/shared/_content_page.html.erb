@@ -1,63 +1,75 @@
-<%
-  # provide a default array for collecting CSS for sections
-  css = []
+        <!-- --><div class="yom-mod yom-art-hd">
+					<div class="bd">
+						<h1 class='headline' ><%= @page.title %></h1>
+						<!-- <h2 class="subheadline">&nbsp;&nbsp;</h2>
+						<a href="http://money.cnn.com/autos/" rel="nofollow"><img src="http://l.yimg.com/bt/api/res/1.2/qVjdkIP6wul7CufVI7D2fQ--/YXBwaWQ9eW5ld3M7Zmk9Zml0O2g9MzM-/http://media.zenfs.com/290/2011/04/07/cnnmoney-logo_174916.jpg" alt="CNNMoney.com" title="" class="logo"></a>
+						<cite class="byline vcard">By <span class="fn">Peter Valdes-Dapena, senior writer</span> | <span class="provider org">CNNMoney.com</span>&nbsp;–&nbsp;<abbr title="2011-05-11T17:20:05+00:00">2 hours 15 minutes ago</abbr></cite> -->
+					</div>
+				</div>
+<!-- <div class="yom-mod social-buttons ">
+	<div class="bd">
+		<div class="yui3-widget yui3-ymsb" id="yui_3_3_0_15_130514253148732">
+		<div id="yui_3_3_0_15_130514253148741" class="ymsb ymsb-retweet ymsb-facebook yui3-ymsb-content">
+			<ul>
+				<li class="ymsb-module ymsb-facebook-module">
+					<div class="ymsb-static"><a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fautos.yahoo.com%2Fnews%2Frusty-cars-that-could-be-worth-millions.html&amp;t=Rusty%20cars%20that%20could%20be%20worth%20millions%20-%20Yahoo%21%20Autos" title="Share">
+						<span>Share</span></a>
+					</div>
+					<div class="ymsb-live">
+							<iframe allowtransparency="true" src="http://l.yimg.com/p/social_buttons/facebook-share-iframe.php?u=http%3A%2F%2Fautos.yahoo.com%2Fnews%2Frusty-cars-that-could-be-worth-millions.html&amp;t=Rusty%20cars%20that%20could%20be%20worth%20millions%20-%20Yahoo%21%20Autos&amp;l=Share&amp;t__S=2142204237&amp;t_ct=a&amp;t_lang=en-US&amp;t_intl=US&amp;t_pkg=83feaf67-2971-37b3-b335-d45fc12b4ec4&amp;t_sec=mit_share&amp;t_act=facebook" frameborder="0" height="22" scrolling="no" width="100">							
+							</iframe>
+					</div>
+				</li>
+				<li class="ymsb-module ymsb-retweet-module">
+					<div class="ymsb-static">
+						<a href="http://twitter.com/home?status=http%3A%2F%2Fautos.yahoo.com%2Fnews%2Frusty-cars-that-could-be-worth-millions.html" title="retweet">
+							<span>retweet</span>
+						</a>
+					</div>
+					<div class="ymsb-live">
+						<iframe allowtransparency="true" src="http://pro.tweetmeme.com/button.js?url=http%3A%2F%2Fautos.yahoo.com%2Fnews%2Frusty-cars-that-could-be-worth-millions.html&amp;style=compact&amp;service=bit.ly&amp;t__S=2142204237&amp;t_ct=a&amp;t_lang=en-US&amp;t_intl=US&amp;t_pkg=83feaf67-2971-37b3-b335-d45fc12b4ec4&amp;t_sec=mit_share&amp;t_act=retweet" frameborder="0" height="22" scrolling="no" width="90"></iframe>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div> -->
 
-  # if 'sections' is passed in as a local_assigns, all of this is ignored.
-  if local_assigns[:sections].blank?
-    # always have a title
-    sections = [{:yield => :body_content_title, :fallback => page_title, :title => true}]
 
-    # append sections from this page.
-    @page.parts.inject(sections) do |s, part|
-      # we have some default yields, body_content_left and body_content_right
-      # these map to 'body' and 'side_body' fields in default Refinery.
-      section = {:fallback => part.body}
-      section[:yield] = case (title_symbol = part.title.to_s.gsub(/\ /, '').underscore.to_sym)
-        when :body then :body_content_left
-        when :side_body then :body_content_right
-        else title_symbol
-        end
+<!-- START 5_11 -->
+<div class="yog-wrap">
+    <div class="yog-col yog-5u">
+        <!-- -->
 
-      # add section to the list unless we were specifically requested not to.
-      # otherwise, add css saying it's been removed.
-      unless (local_assigns[:hide_sections]||=[]).include?(section[:yield])
-        s << section
-      else
-        css << "no_#{section[:yield]}"
-      end
-    end unless @page.nil? or @page.parts.blank?
 
-    # Ensure that even without @page.parts we still have body_content_left and body_content_right
-    all_yields = sections.collect{|s| s[:yield]}
-    sections << {:yield => :body_content_left} unless all_yields.include?(:body_content_left)
-    sections << {:yield => :body_content_right} unless all_yields.include?(:body_content_right)
-  end
+    </div>
+    <div class="yog-col yog-11u">
+        <!-- --><div class="yom-mod yom-art-content">
+	<div class="bd">
+			<%= sanitize @page.parts.find_by_title('Body').body %>
+				<!-- <div class="yom-mod yom-pagination yom-pagination1">
+					<div class="hd a11y"><h4>Pagination</h4></div>
+					<div class="bd">
+								<ul class="past">
+									<li><strong class="yom-button-2 first disabled">
+										<span class="icon icon-arrow-first-2">First</span></strong></li><li><strong class="yom-button-2 prev disabled"><span class="icon icon-arrow-prev-2">Previous</span></strong></li>
+								</ul>
+								<ol class="pages"><li><strong class="disabled">1</strong></li><li><a href="?page=2">2</a></li>
+								</ol>
+								<ul class="future"><li><a href="?page=2" class="yom-button next"><span class="icon icon-arrow-next-1">Next</span></a></li><li><a href="?page=2" class="yom-button last"><span class="icon icon-arrow-last-1">Last</span></a></li>
+								</ul>
+					</div>
+					<div class="ft">(2 Pages) | <a href="?page=all">Read all</a>
+					</div>
+				</div> -->
+				</div>
+	</div>
+           
+                
+    </div>
+</div>
+           
+<!-- END 5_11 -->
 
-  # you can add more sections to the list using something like this:
-  # sections |= [{:yield => :something_else, :fallback => another_method, :id => 'something'}]
 
-  sections.each do |section|
-    section[:html] = yield(section[:yield]) if section[:yield].present?
-
-    if section[:html].blank? and !local_assigns[:show_empty_sections] and
-       !local_assigns[:remove_automatic_sections] and section.keys.include?(:fallback) and
-       section[:fallback].present?
-      section[:html] = raw(section[:fallback])
-    end
-
-    dom_id = section[:id] || section[:yield]
-    if section[:html].present?
-      if section[:title]
-        section[:html] = "<h1 id='#{dom_id}'>#{section[:html]}</h1>"
-      else
-        section[:html] = "<section id='#{dom_id}'><div class='inner'>#{section[:html]}</div></section>"
-      end
-    else
-      css << "no_#{dom_id}"
-    end
-  end
--%>
-<section id='body_content'<%= " class='#{css.join(' ')}'" if css.present? %>>
-  <%= raw sections.map{|section| section[:html]}.join("\n") -%>
-</section>
-<%= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>

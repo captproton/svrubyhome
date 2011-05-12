@@ -1,0 +1,35 @@
+<% flash.each do |key, value| %>
+ <div id='flash' class="flash flash_<%= key %>">
+   <%= value %>
+ </div>
+<% end %>
+<div class="yom-mod yom-art-hd">
+	<div class="bd">
+	    <h1 class="headline"><%= @blog_post.title %></h1>
+		<h2 class="subheadline"></h2>
+		<cite class="byline vcard">By <span class='fn'><%= "#{@blog_post.author.username}" if @blog_post.author.present? %>'</span>' |&nbsp;–&nbsp;<abbr title="<%=l @blog_post.published_at.to_date, :format => :default %>"><%= t('blog.shared.posts.created_at', :when => l(@blog_post.published_at.to_date, :format => :short)) %></abbr>
+		</cite>
+						</div>
+					</div>
+	<div class="yom-mod social-buttons "><div class="bd"><div class="ymsb ymsb-retweet ymsb-facebook"></div></div></div>
+
+	<!-- START 5_11 -->
+	<div class="yog-wrap">
+	    <div class="yog-col yog-16u">
+	        <!-- --><div class="yom-mod yom-art-content">
+						<div class="bd">
+							<%= @blog_post.body.html_safe %>
+						               
+	    				</div>
+					</div>
+		</div>
+	</div>
+	<!-- END 5_11 -->
+	<%# render :partial => 'yom_comments' # comments to be added in later rev after testing %> 
+  <!-- <% if BlogPost::ShareThis.enabled? %>
+    <span class="st_sharethis" displayText="ShareThis"></span>
+  <% end %>
+<%= render :partial => '/shared/draft_page_message' unless @blog_post.nil? or @blog_post.live? -%>
+<% if next_or_previous?(@blog_post) -%>
+  <%= render 'nav' %>
+<% end -%> -->
