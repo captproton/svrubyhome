@@ -32,35 +32,7 @@
     <% end %> -->
 
     <h2><%= t('.comments.add') %></h2>
-<!--  -->
-<form id="ugccmt-post-frm" name="ugccmt-post-frm" method="post" action="/_ugccomments/ugccmtpost/d9d2b04a-0996-302c-9d7c-5efba2494ea8/">
-	<div class="ugccmt-hd">
-		<strong class="ugccmt-nick">Leave a comment...</strong>
-		<a target="_blank" class="ugccmt-guideline" name="ugccmt-guideline" href="" rel="nofollow">Comment Guidelines</a>
-	</div>
-	<div class="ugccmt-avatar-container">
-		<img width="48" height="48" align="left" style="background:url(http://l.yimg.com/a/i/identity/profile_48b.png);" alt="your avatar" class="ugccmt-avatar" src="http://l.yimg.com/a/i/us/nws/2008/news/us/assets/common/images/transparent.png">
-	</div>
-	<div class="ugccmt-info">
-		<div class="textwrapper">
-			<label class="ugccmt-hide" for="ugccmt-post-frm-textarea">Please Enter a Comment</label>
-			<textarea class="ugccmt-comments-post-field" maxlength="4000" cols="50" rows="2" id="ugccmt-post-frm-textarea" name="comment_text"></textarea>
-			<div class="ugccmt-user-picker"></div>
-			<div class="ugccmt-post-button-wrapper">
-				<em aria-live="polite" class="ugccmt-count" id="ugccmt-post-frm-charleft"></em>
-				<div class="ugccmt-post-as-button" id="ugccmt-post-frm-submit">
-					Post As
-					<img src="http://us.js.yimg.com/ugcwidgets/ugccmt/postas_dd_032111.png" class="ugccmt-post-img-down-arrow">
-				</div>
-			</div>
-		</div>
-		<input type="hidden" value="1" name="no_js">
-		<input type="hidden" value="0" name="networker">
-		<input type="hidden" value="http://autos.yahoo.com/news/the-5-biggest-mistakes-used-car-buyers-make-20110506.html" name="baseurl">
-		<input type="hidden" class="ugccmt-crumb" readonly="" value="" name="ycrumb">
-	</div>
-</form>
-<!--  -->
+
     <%= form_for [:blog_post, @blog_comment] do |f| %>
       <%= render :partial => "/shared/admin/error_messages",
                  :locals => {
