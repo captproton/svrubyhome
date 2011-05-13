@@ -4,13 +4,87 @@
 	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/m/search/searchform-min-67238.css&os/mit/media/m/article/article-min-110216.css&os/mit/media/m/pagination/pagination-min-101346.css&d/lib/media/m/social_buttons/social-buttons-min-3947.css&os/mit/media/m/social/social-buttons-min-108171.css&os/mit/media/m/carousel/carousel-template-min-106113.css&os/mit/media/m/carousel/carousel-min-106121.css&os/mit/media/m/index/index-min-108942.css&os/mit/media/m/autos/modules-min-109046.css&os/mit/media/m/accordion/node-accordion-core-min-83270.css&os/mit/media/m/accordion/modules-min-77038.css&d/ugcwidgets/ugccmt/ugccmt-min-1.4.1.8.css" />
 
 	<link rel="stylesheet" href="http://l.yimg.com/os/mit/media/m/article/print-min-56105.css" type="text/css" media="print"></link>
+	<link rel="stylesheet" href="/stylesheets/autos-min-108105.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-108859.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108307.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-111755.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="http://l.yimg.com/zz/combo?os/mit/media/themes/base/base-min-108859.css&os/mit/media/themes/base/base-imagery-min-107649.css&os/mit/media/themes/black0d0d0d/theme-min-108307.css&os/mit/media/themes/black0d0d0d/theme-imagery-min-100135.css&os/mit/media/p/autos/site/autos-min-111755.css" /> -->
 <% end -%>
 <%- content_for :javascripts do -%>
 
 <% end -%>
 
+<%= render 'post' %>
+
+<% if BlogPost.comments_allowed? %>
+
+    <h2><%= t('.comments.title') %></h2>
+    <% if (comments = @blog_post.comments.approved).any? %>
+      <%= render :partial => "comment", :collection => comments %>
+    <% else %>
+      <p>
+        <%= t('blog.shared.comments.none') %>.
+      </p>
+    <% end %>
+
+    <!-- <% flash.each do |key, value| %>
+      <div id='flash' class="flash flash_<%= key %>">
+        <%= value %>
+      </div>
+    <% end %> -->
+
+    <h2><%= t('.comments.add') %></h2>
+<!--  -->
+<form id="ugccmt-post-frm" name="ugccmt-post-frm" method="post" action="/_ugccomments/ugccmtpost/d9d2b04a-0996-302c-9d7c-5efba2494ea8/">
+	<div class="ugccmt-hd">
+		<strong class="ugccmt-nick">Leave a comment...</strong>
+		<a target="_blank" class="ugccmt-guideline" name="ugccmt-guideline" href="" rel="nofollow">Comment Guidelines</a>
+	</div>
+	<div class="ugccmt-avatar-container">
+		<img width="48" height="48" align="left" style="background:url(http://l.yimg.com/a/i/identity/profile_48b.png);" alt="your avatar" class="ugccmt-avatar" src="http://l.yimg.com/a/i/us/nws/2008/news/us/assets/common/images/transparent.png">
+	</div>
+	<div class="ugccmt-info">
+		<div class="textwrapper">
+			<label class="ugccmt-hide" for="ugccmt-post-frm-textarea">Please Enter a Comment</label>
+			<textarea class="ugccmt-comments-post-field" maxlength="4000" cols="50" rows="2" id="ugccmt-post-frm-textarea" name="comment_text"></textarea>
+			<div class="ugccmt-user-picker"></div>
+			<div class="ugccmt-post-button-wrapper">
+				<em aria-live="polite" class="ugccmt-count" id="ugccmt-post-frm-charleft"></em>
+				<div class="ugccmt-post-as-button" id="ugccmt-post-frm-submit">
+					Post As
+					<img src="http://us.js.yimg.com/ugcwidgets/ugccmt/postas_dd_032111.png" class="ugccmt-post-img-down-arrow">
+				</div>
+			</div>
+		</div>
+		<input type="hidden" value="1" name="no_js">
+		<input type="hidden" value="0" name="networker">
+		<input type="hidden" value="http://autos.yahoo.com/news/the-5-biggest-mistakes-used-car-buyers-make-20110506.html" name="baseurl">
+		<input type="hidden" class="ugccmt-crumb" readonly="" value="" name="ycrumb">
+	</div>
+</form>
+<!--  -->
+    <%= form_for [:blog_post, @blog_comment] do |f| %>
+      <%= render :partial => "/shared/admin/error_messages",
+                 :locals => {
+                   :object => f.object,
+                   :include_object_name => true
+                 } %>
+      <div class='field'>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class='field'>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+      <div class='field message_field'>
+        <%= f.label :message %>
+        <%= f.text_area :message, :rows => 6 %>
+      </div>
+      <div class='field form-actions'>
+        <%= f.submit t('.submit') %>
+      </div>
+    <% end %>
+
+<% end %>
 
 <% content_for :body_content_left do %>
   <div id="show_blog_post">
@@ -61,14 +135,14 @@
   <% end %>
 <% end %>
 
-<% content_for :body_content_right do %>
-  <%= render :partial => "/blog/shared/categories" %>
-  <%= render :partial => "/blog/shared/posts" %>
-  <%= render :partial => "/blog/shared/rss_feed" %>
-  <%= blog_archive_list %>
-<% end %>
+<%# content_for :body_content_right do %>
+  <%# render :partial => "/blog/shared/categories" %>
+  <%# render :partial => "/blog/shared/posts" %>
+  <%# render :partial => "/blog/shared/rss_feed" %>
+  <%# blog_archive_list %>
+<%# end %>
 
-<%= render :partial => "/shared/content_page", :locals => { :remove_automatic_sections => true }  %>
+<%# render :partial => "/shared/content_page", :locals => { :remove_automatic_sections => true }  %>
 
 <% if Refinery.version < '0.9.9' %>
   <% content_for :head_libraries, jquery_include_tags(:jquery_ui => false) %>
